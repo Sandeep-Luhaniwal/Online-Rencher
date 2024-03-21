@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./public/assets/images/svg/home/favicon.svg" type="image/x-icon" />
+  <title>Online Rencher</title>
+  <link rel="stylesheet" href="/public/assets/css/style.css" />
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Online Rencher" />
+  <meta name="description" content="Terms Of Use" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://online-rencher.web.app/terms" />
+  <meta property="og:title" content="Online Rencher" />
+  <meta property="og:description" content="Terms Of Use" />
+  <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://online-rencher.web.app/terms" />
+  <meta property="twitter:title" content="Online Rencher" />
+  <meta property="twitter:description" content="Terms Of Use" />
+  <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+</head>
+
+<body>
+  <!-- POPUP -->
+  <div id="popup-parent" class="absolute backdrop-blur-md w-screen h-screen z-[52] px-3 hidden">
+    <div class="h-full flex justify-center items-center">
+      <div id="overlay" class="fixed top-0 left-0 h-screen w-screen z-0"></div>
+      <button id="close-popup"
+        class="absolute z-[50] top-[3%] sm:top-[5%] right-[5%] hover:rotate-180 text-black transition-all duration-300 font-bold">
+        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div
+        class="relative z-[1] flex w-full max-w-[500px] sm:max-w-[690px] popup mx-auto rounded-xl shadow-whiteShadow bg-white">
+        <!-- Popup content -->
+        <form class="w-full sm:w-1/2 lg:py-[30px] p-5 lg:px-10">
+          <img class="max-w-[189px] mx-auto mb-5 rounded-e-xl" src="./public/assets/images/png/home/page-popup-logo.png"
+            alt="page-popup-logo" />
+          <h3 class="text-xl font-semibold text-shark text-center sm:text-start">
+            Log in to explore and enjoy all our features.
+          </h3>
+          <label class="text-2xs sm:text-xs text-shark block mb-2 font-normal mt-4 lg:mt-6">Username or email</label>
+          <input required
+            class="py-2 placeholder:absolute placeholder:top-[30%] sm:placeholder:top-[25%] px-3 border-[1px] border-tundora active:outline-bostonBlue focus-visible:outline-bostonBlue focus-visible:!outline-[1px] rounded-md placeholder:text-rollingStone placeholder:text-xs placeholder:sm:text-sm placeholder:font-normal w-full"
+            type="email" placeholder="emma@example.com" />
+          <label class="text-2xs sm:text-xs text-shark block my-2 font-normal">Password</label>
+          <input required
+            class="py-2 placeholder:absolute placeholder:top-[30%] sm:placeholder:top-[25%] px-3 border-[1px] border-tundora active:outline-bostonBlue focus-visible:outline-bostonBlue focus-visible:!outline-[1px] rounded-md placeholder:text-rollingStone placeholder:text-xs placeholder:sm:text-sm placeholder:font-normal w-full"
+            type="password" placeholder="password" />
+          <button
+            class="py-[10px] px-7 bg-pelorousBlue text-white font-bold text-2xs sm:text-xs mt-4 rounded-md block w-full hover:shadow-loginBtn duration-300">
+            Continue
+          </button>
+          <p class="text-rollingStone opacity-60 font-normal text-2xs mt-4">
+            By continuing, you agree to the
+            <a rel="references" href="#"
+              class="border-b-rollingStone hover:text-azure border-b transition-all duration-300">Terms and Conditions
+              of use</a>. Please refer to our
+            <a rel="references" href="#"
+              class="border-b-rollingStone hover:text-azure border-b transition-all duration-300">Privacy Policy</a>.
+          </p>
+          <a rel="references" href="#"
+            class="text-azure font-normal text-2xs mt-4 hover:opacity-70 transition-all duration-300">Forgot your
+            password?</a>
+        </form>
+        <!-- Image section (hidden on small screens) -->
+        <div class="w-1/2 hidden sm:block">
+          <img class="w-full h-full" src="./public/assets/images/png/home/log-in-popup-img.png"
+            alt="log-in-popup-img" />
+        </div>
+        <!-- Close icon -->
+      </div>
+    </div>
+  </div>
+  <!-- ============= HEADER =========== -->
+  <header
+    class="lg:bg-[url('/public/assets/images/png/individual/nav-bg-img.png')] bg-cover bg-no-repeat  py-4 sm:pb-3 sm:pt-[10px]">
+    <nav class="flex justify-between px-6 lg:max-w-[1108px] mx-auto">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/">
+          <img class="h-[60px] hidden lg:inline pr-1" src="/public/assets/images/png/home/page-logo.png" alt="logo" />
+        </a>
+        <a rel="noreferance"
+          class="text-white text-xs font-semibold hidden lg:inline-block hover:bg-lightSky rounded-xl transition-all duration-300 py-[6px] px-3 leading-normal"
+          href="/">How it works</a>
+        <a rel="noreferance"
+          class="text-white text-xs font-semibold hidden lg:inline-block hover:bg-lightSky rounded-xl transition-all duration-300 py-[6px] px-3 leading-normal"
+          href="/faq">FAQ's</a>
+        <a rel="noreferance"
+          class="text-white text-xs font-semibold hidden lg:inline-block hover:bg-lightSky rounded-xl transition-all duration-300 py-[6px] px-3 leading-normal"
+          href="/gallery">All calculators</a>
+      </div>
+
+      <!-- Menu -->
+      <div class="hidden lg:flex items-center">
+        <div>
+          <div class="flex">
+            <p id="open-popup-desktop"
+              class="text-white cursor-pointer flex gap-1 open-popup hover:bg-lightSky items-center px-3 text-xs font-medium rounded-xl transition-all duration-300 leading-normal">
+              <img src="/public/assets/images/svg/home/login-icon.svg" alt="login" />Log in
+            </p>
+            <a rel="noreferance" href="#"
+              class="text-white me-2 flex gap-1 hover:bg-lightSky rounded-xl transition-all duration-300 items-center px-3 text-xs font-medium leading-normal"><img
+                src="/public/assets/images/svg/home/language-icon.svg" alt="language" />EN</a>
+            <div class="border flex gap-2 items-center py-[6px] px-4 border-white rounded-full">
+              <img class="h-[12px] cursor-pointer" src="/public/assets/images/svg/home/search.svg" alt="search icon" />
+              <input
+                class="border-0 text-white placeholder:text-white placeholder:opacity-70 text-xs bg-transparent outline-none"
+                placeholder="Search" type="text" />
+            </div>
+            <a href="mailto:contact@gmail.com"
+              class="bg-white flex gap-2 ms-4 items-center hover:flex transition-all duration-300 hover:justify-center hover:shadow-navBtnShadow w-[176px] group hover:bg-navBtnBg py-[6px] px-4 rounded-xl">
+              <img class="h-[12px] transition-all duration-300 group-hover:hidden"
+                src="/public/assets/images/svg/home/mail-icon.svg" alt="mail icon" />
+              <p class="text-xs font-medium transition-all duration-300 group-hover:hidden text-azure leading-none">
+                <span>contact@gmail.com</span>
+              </p>
+              <p
+                class="text-xs hidden transition-all duration-300 group-hover:block text-white font-medium leading-none">
+                <span>Let's Talk</span>
+              </p>
+              <img class="h-[12px] hidden transition-all duration-300 group-hover:block"
+                src="/public/assets/images/svg/home/white-mail.svg" alt="mail icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu Button (Hidden on Medium and above screens) -->
+      <div class="lg:hidden flex items-center relative z-[51]">
+        <a rel="noreferance" href="mailto:contact@gmail.com"
+          class="bg-bostonBlue !h-[34px] flex gap-2 items-center py-[9px] px-3 rounded-full cursor-pointer">
+          <p class="text-xs font-bold flex gap-2 text-white uppercase">
+            <img src="./public/assets/images/svg/home/white-mail.svg" alt="mail" />contact
+          </p>
+        </a>
+
+        <div class="mobile_navbar_btn d-none cursor-pointer ms-3">
+          <img onclick="showNav()" class="mobile_nav_toggle cursor_pointer" id="navToggleIcon"
+            src="/public/assets/images/svg/home/navbar-hamburguer.svg" alt="toggle" />
+        </div>
+      </div>
+    </nav>
+    <!-- Mobile Menu (Hidden on Small screens) -->
+    <div id="navBar"
+      class="bg-white absolute top-[10%] lg:hidden left-[-100%] w-full z-50 !h-screen transition-all duration-300 ease-linear">
+      <div class="flex flex-col">
+        <p id="open-popup-mobile"
+          class="font-semibold text-tundora text-lg pl-4 py-6 cursor-pointer border-b-[2px] border-blue-600 open-popup">
+          Log in
+        </p>
+        <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray" href="/">How it works</a>
+        <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray" href="/faq">Frequently
+          asked questions</a>
+        <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray" href="/gallery">All
+          calculators</a>
+        <div class="relative border-b border-smokeGray">
+          <div class="relative w-full cursor-pointer" id="select-button">
+            <button class="pl-4 py-6">
+              <span class="w-full font-semibold text-tundora text-lg">Change language</span>
+              <span
+                class="absolute inset-y-0 right-[3%] flex items-center pr-2 pointer-events-none transform transition-transform"
+                id="dropdown-icon">
+                <img class="absolute rotate-180 w-[10px]" src="./public/assets/images/png/home/nav-mobile-select.png"
+                  alt="select" />
+              </span>
+            </button>
+          </div>
+          <div id="select-options" class="absolute mt-1 w-full hidden">
+            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="select-button">
+              <a rel="noreferance" href="#" class="block px-4 py-2 text-lg text-tundora" role="menuitem">English</a>
+              <a rel="noreferance" href="#" class="block px-4 py-2 text-lg text-tundora" role="menuitem">Deutsch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- =========== TERMS OF USE =========== -->
+  <section class="lg:py-[99px] sm:pt-[88px] sm:pb-[108px] pt-[31px] pb-4">
+    <div class="container md:max-w-[705px] mx-auto lg:px-0 px-4">
+      <h1
+        class="text-bostonBlue sm:text-4lg text-3md font-bold sm:leading-[63px] leading-[40.32px] text-center lg:mb-[99px] sm:mb-[88px] mb-[22px]">
+        Terms of Use
+      </h1>
+      <p class="font-normal leading-[20.16px] text-shark sm:text-base text-sm sm:mb-10 mb-6">
+        At the moment there are the following terms of use and information
+        about the mein-onlinerechner.com project. Further information on data
+        protection can be found
+        <a class="border-b border-solid border-black hover:border-bostonBlue hover:text-bostonBlue" target="_blank"
+          href="https://www.mein-onlinerechner.com/onlinerechner-anfrage.php">here</a>.
+      </p>
+      <ul class="list-disc ps-6">
+        <li class="sm:mb-6 mb-4">
+          <p class="text-shark sm:text-base text-sm leading-[20.16px] font-normal">
+            We log entries on the online computers; no personal data is stored
+            (anonymously).
+          </p>
+        </li>
+        <li class="sm:mb-6 mb-4">
+          <p class="text-shark sm:text-base text-sm leading-[20.16px] font-normal">
+            When integrating the free calculator(s) into your homepage, please
+            do not remove the link to our project, this will help you and us
+            to make the online calculators better known.
+          </p>
+        </li>
+        <li class="sm:mb-6 mb-4">
+          <p class="text-shark sm:text-base text-sm leading-[20.16px] font-normal">
+            Calculation accuracy: We or the respective author assume no
+            responsibility for the individual online calculations. In the long
+            term, the online calculators will be expanded to include the
+            quality factor “Rating” in order to evaluate the accuracy and
+            handling of the respective calculator.
+          </p>
+        </li>
+        <li class="sm:mb-6 mb-4">
+          <p class="text-shark sm:text-base text-sm leading-[20.16px] font-normal">
+            Changes to the offer: The provider reserves the right to make
+            changes or additions to the information provided on the website or
+            to block the offer completely without prior notice.
+          </p>
+        </li>
+        <li class="sm:mb-6 mb-4">
+          <p class="text-shark sm:text-base text-sm leading-[20.16px] font-normal">
+            Copyright: The content of this website, including the structure,
+            structure and all texts, images and illustrations, is protected by
+            copyright. Mein-Onlinerechner.com grants users in "public
+            projects" the right to integrate online calculators with the
+            appropriate source information ONLY via an iframe. Any other form
+            (reading the content, including PHP, etc.) is prohibited and
+            requires the prior written consent of the provider. Integrating
+            your own HTML or Javascript code into your own homepage is only
+            permitted with paid packages CALC PREMIUM and CALC PRO.
+          </p>
+        </li>
+        <li class="sm:mb-6 mb-4">
+          <p class="text-shark sm:text-base text-sm leading-[20.16px] font-normal">
+            The user allows the provider of Mein-Onlinerechner.com and Sternad
+            Software GmbH (partner company) the permanent, unrestricted use
+            and exploitation of the logged anonymous entries from the user's
+            respective online computers. If the user does not agree to the
+            use, the project must be set to "not public" and, if necessary,
+            logging must be deactivated (edit project > deactivate logging).
+            In this case, the exploitation rights remain exclusively with the
+            user. Logging is activated per project by default.
+          </p>
+        </li>
+        <li class="sm:mb-6 mb-4">
+          <p class="text-shark sm:text-base text-sm leading-[20.16px] font-normal">
+            In principle, registration is ALWAYS free, the standard package
+            (CALC FREE) is also free. You can find
+            <a target="_blank" class="border-b border-solid border-black hover:border-bostonBlue hover:text-bostonBlue"
+              href="https://www.mein-onlinerechner.com/rechner-pakete.php">further information about the packages and
+              services</a>
+            here .The selection or request of paid options is possible without
+            obligation using this
+            <a target="_blank" class="border-b border-solid border-black hover:border-bostonBlue hover:text-bostonBlue"
+              href="https://www.mein-onlinerechner.com/onlinerechner-anfrage.php">inquiry form</a>
+            . Mein-Onlinerechner is entitled to position advertising in the
+            free package if necessary. The obligation to provide reference
+            remains with the free package. The link should always be marked
+            with the link marker rel="nofollow" (devaluation).
+          </p>
+        </li>
+      </ul>
+      <p class="font-semibold leading-[20.16px] text-shark sm:text-base text-sm">
+        As of: October 22, 2022
+      </p>
+    </div>
+  </section>
+  <!-- ========= RELATED CONTENT ========== -->
+  <section class="bg-wildSand sm:pt-[53px] sm:pb-[57px] pt-[27px] pb-[35px]">
+    <div class="mx-auto container md:max-w-[896px] lg:px-0 px-4">
+      <p class="mb-3 text-shark opacity-50 text-sm font-bold">
+        Related content
+      </p>
+      <div class="flex sm:gap-4 gap-[22px] sm:flex-row flex-col">
+        <div class="mb-0">
+          <h2 class="mb-[10px] font-semibold sm:text-base text-sm leading-[20.16px] text-tundora">
+            Terms of Use
+          </h2>
+          <p class="sm:max-w-[345px] font-normal text-2xs sm:text-xs leading-[15.16px] text-tundora">
+            These documents explain how personal information is collected and
+            used, ensuring privacy and compliance.
+          </p>
+        </div>
+        <div class="mb-0">
+          <h2 class="mb-[10px] font-semibold sm:text-base text-sm leading-[20.16px] text-tundora">
+            Data Protection
+          </h2>
+          <p class="sm:max-w-[345px] font-normal text-2xs sm:text-xs leading-[15.16px] text-tundora">
+            These documents explain how personal information is collected and
+            used, ensuring privacy and compliance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-shark">
+    <div class="custom_container">
+      <div class="flex flex-wrap justify-between pt-12 md:pt-10">
+        <div class="w-full lg:w-3/12">
+          <a href="/"><img height="30px" width="164px" src="/assets/images/png/home/page-logo.png"
+              alt="footer logo" /></a>
+          <p class="font-bold text-2xs sm:text-xs text-wildSand pt-7 md:pt-[15px]">
+            B2B monthly newsletter
+          </p>
+          <p class="font-normal text-2xs sm:text-xs text-wildSand lg:max-w-[210px] opacity-90">
+            The latest trends and topics about online calculators
+          </p>
+          <form class="pt-3 lg:pt-2 flex flex-col items-start">
+            <input
+              class="w-[172px] sm:w-[233px] text-2xs sm:text-xs text py-[5px] sm:py-2 px-2 sm:px-3 border bg-transparent text-white placeholder:text-white border-wildSand border-opacity-50 rounded-[7px] sm:rounded-xl"
+              type="email" required placeholder="emma@example.com" />
+            <button type="submit"
+              class="text-sm font-bold text-white py-[10px] sm:py-3 px-5 sm:px-8 border border-opacity-50 border-wildSand rounded-[7px] sm:rounded-xl mt-3 hover:bg-bostonBlue duration-300 hover:border-bostonBlue">
+              Send
+            </button>
+          </form>
+        </div>
+        <div class="w-full lg:w-8/12 flex justify-between flex-wrap pt-5 lg:pt-0">
+          <div class="w-1/2 sm:w-auto">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal opacity-80">
+                Menu
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/">Home</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/">How it works</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/faq">FAQ</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">All calculators</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-1/2 sm:w-auto">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-[30px]">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/faq">Contact Us</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/faq">Order process</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/gallery">Product info</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-1/2 sm:w-auto pt-8 sm:pt-0">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal opacity-80">
+                Legal
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/impressum">Impressum</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/terms">Terms of use</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/dataProtection">Data Protection</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-1/2 sm:w-auto pt-8 sm:pt-0">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal opacity-80">
+                Calculation tools
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">Price calculator</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">Calculate tariffs</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">Excel calculator</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3">
+                <a class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/gallery">More tools</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p
+        class="lg:text-end text-center text-opacity-50 text-alto text-2xs sm:text-xs font-normal pt-[68px] sm:pt-10 md:pt-6 lg:pt-3 pb-3">
+        ©2016-<span id="year-change"></span>
+        Mein-Onlinerechner.com Online
+        Calculators</p>
+    </div>
+  </footer>
+  <button onclick="topFunction()" id="myBtn" title="Go to top" class="fixed right-0 bottom-0 m-5 z-[99] back-to-top">
+    <span class="bg-interactivitybox p-2 inline-block rounded-full border-2 border-white"><svg width="24" height="24"
+        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 11L12 5L18 11M6 19L12 13L18 19" stroke="#fff" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </span>
+  </button>
+  <!-- ============= MAIN.JS SCRIPT LINK ============ -->
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script>
+    function showNav() {
+      var navBar = document.getElementById("navBar");
+      var body = document.getElementsByTagName("body")[0];
+      var navToggleIcon = document.getElementById("navToggleIcon");
+
+      navBar.classList.toggle("show_nav");
+      body.classList.toggle("nav_mobile_scroll");
+      navToggleIcon.src = navBar.classList.contains("show_nav") ?
+        "/assets/images/svg/home/nav-cross.svg" :
+        "/assets/images/svg/home/navbar-hamburguer.svg";
+    }
+  </script>
+  <script>
+    // NAV CUSTOM SELECT JS
+    document.addEventListener("DOMContentLoaded", function () {
+      const selectButton = document.getElementById("select-button");
+      const selectOptions = document.getElementById("select-options");
+      const dropdownIcon = document.getElementById("dropdown-icon");
+
+      selectButton.addEventListener("click", function () {
+        selectOptions.classList.toggle("hidden");
+        dropdownIcon.classList.toggle("rotate-180");
+      });
+
+      selectOptions.querySelectorAll("a").forEach((option) => {
+        option.addEventListener("click", function () {
+          const selectedOption = option.textContent.trim();
+          selectButton.querySelector("span").textContent = selectedOption;
+          selectOptions.classList.add("hidden");
+        });
+      });
+
+      // Close the dropdown when clicking outside of it
+      window.addEventListener("click", function (e) {
+        if (!selectButton.contains(e.target)) {
+          selectOptions.classList.add("hidden");
+          dropdownIcon.classList.remove("rotate-180");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

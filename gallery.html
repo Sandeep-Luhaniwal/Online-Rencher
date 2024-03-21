@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>OnlineRencher-gallery</title>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="gallery" />
+  <meta name="description" content="Find a tool to improve your website’s interactivity!" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://online-rencher.web.app" />
+  <meta property="og:title" content="gallery" />
+  <meta property="og:description" content="Find a tool to improve your website’s interactivity!" />
+  <meta property="og:image" content="/public/images/webp/gallery/meta_img.webp" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://online-rencher.web.app" />
+  <meta property="twitter:title" content="gallery" />
+  <meta property="twitter:description" content="Find a tool to improve your website’s interactivity!" />
+  <meta property="twitter:image" content="/public/images/webp/gallery/meta_img.webp" />
+
+  <link rel="shortcut icon" href="./public/assets/images/svg/home/favicon.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="/public/assets/css/style.css" />
+</head>
+
+<body>
+  <!-- POPUP -->
+  <div id="popup-parent" class="absolute backdrop-blur-md w-screen h-screen z-[52] px-3 hidden">
+    <div class="h-full flex justify-center items-center">
+      <div id="overlay" class="fixed top-0 left-0 h-screen w-screen z-0"></div>
+      <button id="close-popup"
+        class="absolute z-[50] top-[3%] sm:top-[5%] right-[5%] hover:rotate-180 text-black transition-all duration-300 font-bold">
+        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div
+        class="relative z-[1] flex w-full max-w-[500px] sm:max-w-[690px] popup mx-auto rounded-xl shadow-whiteShadow bg-white">
+        <!-- Popup content -->
+        <form class="w-full sm:w-1/2 lg:py-[30px] p-5 lg:px-10">
+          <img class="max-w-[189px] mx-auto mb-5 rounded-e-xl" src="./public/assets/images/png/home/page-popup-logo.png"
+            alt="page-popup-logo" />
+          <h3 class="text-xl font-semibold text-shark text-center sm:text-start">
+            Log in to explore and enjoy all our features.
+          </h3>
+          <label class="text-2xs sm:text-xs text-shark block mb-2 font-normal mt-4 lg:mt-6">Username or email</label>
+          <input required
+            class="py-2 placeholder:absolute placeholder:top-[30%] sm:placeholder:top-[25%] px-3 border-[1px] border-tundora active:outline-bostonBlue focus-visible:outline-bostonBlue focus-visible:!outline-[1px] rounded-md placeholder:text-rollingStone placeholder:text-xs placeholder:sm:text-sm placeholder:font-normal w-full"
+            type="email" placeholder="emma@example.com" />
+          <label class="text-2xs sm:text-xs text-shark block my-2 font-normal">Password</label>
+          <input required
+            class="py-2 placeholder:absolute placeholder:top-[30%] sm:placeholder:top-[25%] px-3 border-[1px] border-tundora active:outline-bostonBlue  focus-visible:outline-bostonBlue focus-visible:!outline-[1px] rounded-md placeholder:text-rollingStone placeholder:text-xs placeholder:sm:text-sm placeholder:font-normal w-full"
+            type="password" placeholder="password" />
+          <button
+            class="py-[10px] px-7 bg-pelorousBlue text-white font-bold text-2xs sm:text-xs mt-4 rounded-md block w-full hover:shadow-loginBtn duration-300">
+            Continue
+          </button>
+          <p class="text-rollingStone opacity-60 font-normal text-2xs mt-4">
+            By continuing, you agree to the
+            <a rel="references" href="#"
+              class="border-b-rollingStone hover:text-azure border-b transition-all duration-300">Terms and Conditions
+              of use</a>. Please
+            refer to our
+            <a rel="references" href="#"
+              class="border-b-rollingStone hover:text-azure border-b transition-all duration-300">Privacy Policy</a>.
+          </p>
+          <a rel="references" href="#"
+            class="text-azure font-normal text-2xs mt-4 hover:opacity-70 transition-all duration-300">Forgot your
+            password?</a>
+        </form>
+        <!-- Image section (hidden on small screens) -->
+        <div class="w-1/2 hidden sm:block">
+          <img class="w-full h-full" src="./public/assets/images/png/home/log-in-popup-img.png"
+            alt="log-in-popup-img" />
+        </div>
+        <!-- Close icon -->
+
+      </div>
+    </div>
+  </div>
+  <header class="py-4 sm:py-8">
+    <nav class="flex justify-between px-6 lg:max-w-[1108px] mx-auto">
+      <!-- Logo -->
+      <div class="flex xl:gap-2 items-center">
+        <a href="/">
+          <img class="hidden lg:inline pr-1" src="/public/assets/images/svg/gallary/gallery_logo.svg" alt="logo" />
+        </a>
+        <a rel="noreferance" class="text-bostonBlue text-xs font-semibold hidden lg:inline-block hover:bg-[#f4f4f4] rounded-xl
+          transition-all duration-300 py-[6px] px-3 leading-normal" href="/">How it works</a>
+        <a rel="noreferance" class="text-bostonBlue text-xs font-semibold hidden lg:inline-block hover:bg-[#f4f4f4] rounded-xl
+          transition-all duration-300 py-[6px] px-3 leading-normal" href="/faq">FAQ's</a>
+        <a rel="noreferance" class="text-bostonBlue text-xs font-semibold hidden lg:inline-block hover:bg-[#f4f4f4] rounded-xl
+          transition-all duration-300 py-[6px] px-3 leading-normal" href="/gallery">All calculators</a>
+      </div>
+
+      <!-- Menu -->
+      <div class="hidden lg:flex items-center">
+        <div>
+          <div class="flex gap-2 xl:gap-4">
+            <p id="open-popup-desktop"
+              class="text-bostonBlue group flex gap-1 cursor-pointer open-popup  hover:bg-[#f4f4f4] items-center px-3 text-xs font-medium rounded-xl transition-all duration-300 leading-normal">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 1C5.477 1 1 5.477 1 11C1 16.523 5.477 21 11 21C16.523 21 21 16.523 21 11C21 5.477 16.523 1 11 1Z"
+                  stroke="#3A81C3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M3.27148 17.346C3.27148 17.346 5.50048 14.5 11.0005 14.5C16.5005 14.5 18.7305 17.346 18.7305 17.346M11.0005 11C11.7961 11 12.5592 10.6839 13.1218 10.1213C13.6844 9.55871 14.0005 8.79565 14.0005 8C14.0005 7.20435 13.6844 6.44129 13.1218 5.87868C12.5592 5.31607 11.7961 5 11.0005 5C10.2048 5 9.44177 5.31607 8.87916 5.87868C8.31655 6.44129 8.00048 7.20435 8.00048 8C8.00048 8.79565 8.31655 9.55871 8.87916 10.1213C9.44177 10.6839 10.2048 11 11.0005 11Z"
+                  stroke="#3A81C3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+
+              Log in</p>
+            <a rel="noreferance" href="#" class="text-bostonBlue group flex gap-1 hover:bg-[#f4f4f4] rounded-xl transition-all
+              duration-300 items-center px-3 text-xs font-medium leading-normal">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 18C7.76133 18 6.59467 17.7633 5.5 17.29C4.40533 16.8167 3.452 16.1733 2.64 15.36C1.82667 14.5487 1.18333 13.5953 0.71 12.5C0.236667 11.4053 0 10.2387 0 9C0 7.758 0.236667 6.59033 0.71 5.497C1.184 4.40367 1.82733 3.451 2.64 2.639C3.45133 1.827 4.40467 1.18433 5.5 0.711C6.59467 0.237 7.76133 0 9 0C10.242 0 11.4097 0.236667 12.503 0.71C13.5963 1.184 14.549 1.82733 15.361 2.64C16.173 3.452 16.8157 4.40433 17.289 5.497C17.763 6.59033 18 7.758 18 9C18 10.2387 17.7633 11.4053 17.29 12.5C16.8167 13.5947 16.1733 14.548 15.36 15.36C14.548 16.1727 13.5957 16.816 12.503 17.29C11.4097 17.7633 10.242 18 9 18ZM9 17.008C9.58667 16.254 10.0707 15.5137 10.452 14.787C10.8327 14.0603 11.1423 13.247 11.381 12.347H6.619C6.883 13.2977 7.199 14.1363 7.567 14.863C7.935 15.5897 8.41267 16.3047 9 17.008ZM7.727 16.858C7.26033 16.308 6.83433 15.628 6.449 14.818C6.06367 14.0087 5.777 13.1847 5.589 12.346H1.753C2.32633 13.59 3.13867 14.61 4.19 15.406C5.242 16.202 6.42067 16.686 7.726 16.858M10.272 16.858C11.5773 16.686 12.756 16.202 13.808 15.406C14.86 14.61 15.6723 13.59 16.245 12.346H12.411C12.1577 13.1973 11.8387 14.028 11.454 14.838C11.0687 15.6473 10.6747 16.3207 10.272 16.858ZM1.345 11.346H5.38C5.304 10.936 5.25067 10.5363 5.22 10.147C5.188 9.75767 5.172 9.37533 5.172 9C5.172 8.62467 5.18767 8.24233 5.219 7.853C5.25033 7.46367 5.30367 7.06367 5.379 6.653H1.347C1.23833 6.99967 1.15333 7.37733 1.092 7.786C1.03067 8.19467 1 8.59933 1 9C1 9.40133 1.03033 9.806 1.091 10.214C1.15233 10.6227 1.23733 11 1.346 11.346M6.381 11.346H11.619C11.695 10.936 11.7483 10.5427 11.779 10.166C11.811 9.79 11.827 9.40133 11.827 9C11.827 8.59867 11.8113 8.21 11.78 7.834C11.7487 7.45733 11.6953 7.064 11.62 6.654H6.38C6.30467 7.064 6.25133 7.45733 6.22 7.834C6.18867 8.21 6.173 8.59867 6.173 9C6.173 9.40133 6.18867 9.79 6.22 10.166C6.25133 10.5427 6.30567 10.936 6.381 11.346ZM12.62 11.346H16.654C16.7627 10.9993 16.8477 10.622 16.909 10.214C16.9703 9.806 17.0007 9.40133 17 9C17 8.59867 16.9697 8.194 16.909 7.786C16.8477 7.37733 16.7627 7 16.654 6.654H12.619C12.695 7.064 12.7483 7.46367 12.779 7.853C12.811 8.24233 12.827 8.62467 12.827 9C12.827 9.37533 12.8113 9.75767 12.78 10.147C12.7487 10.5363 12.6953 10.9363 12.62 11.347M12.412 5.654H16.246C15.66 4.38467 14.8573 3.36467 13.838 2.594C12.818 1.82333 11.6297 1.33333 10.273 1.124C10.7397 1.73733 11.1593 2.43933 11.532 3.23C11.904 4.02 12.1973 4.828 12.412 5.654ZM6.619 5.654H11.381C11.117 4.71533 10.7913 3.86667 10.404 3.108C10.0173 2.34867 9.54933 1.64333 9 0.992C8.45133 1.64333 7.98333 2.34867 7.596 3.108C7.20933 3.86667 6.88367 4.71533 6.619 5.654ZM1.754 5.654H5.588C5.80267 4.828 6.096 4.02 6.468 3.23C6.84067 2.43933 7.26033 1.737 7.727 1.123C6.35767 1.333 5.16633 1.82633 4.153 2.603C3.13967 3.38033 2.33967 4.397 1.753 5.653"
+                  fill="#3A81C3" />
+              </svg>
+
+              EN</a>
+            <div class="border border-solid border-bostonBlue rounded-2xl flex gap-2 items-center py-[6px] px-4 ">
+              <img class="h-[12px] cursor-pointer" src="/public/assets/images/svg/gallary/lens_blue.svg"
+                alt="search icon" />
+              <input class="border-0 text-tundora placeholder:text-tundora placeholder:opacity-70
+                text-xs bg-transparent outline-none" placeholder="Search" type="text" />
+            </div>
+            <a href="mailto:contact@gmail.com" class="bg-bostonBlue bg-opacity-25 flex gap-2 items-center hover:flex transition-all duration-300
+              hover:justify-center hover:shadow-navBtnShadow w-[176px] group hover:bg-navBtnBg py-[6px] px-4
+              rounded-xl">
+              <img class="h-[12px] transition-all duration-300 group-hover:hidden"
+                src="/public/assets/images/svg/home/mail-icon.svg" alt="mail icon" />
+              <p class="text-xs font-medium transition-all duration-300 group-hover:hidden text-azure leading-none">
+                <span>contact@gmail.com</span>
+              </p>
+              <p
+                class="text-xs hidden transition-all duration-300 group-hover:block text-white font-medium leading-none">
+                <span>Let's Talk</span>
+              </p>
+              <img class="h-[12px] hidden transition-all duration-300 group-hover:block"
+                src="/public/assets/images/svg/home/white-mail.svg" alt="mail icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu Button (Hidden on Medium and above screens) -->
+      <div class="lg:hidden flex items-center relative z-[51]">
+        <a rel="noreferance" href="mailto:contact@gmail.com"
+          class="bg-bostonBlue !h-[34px] flex gap-2 items-center py-[9px] px-3 rounded-full cursor-pointer">
+          <p class="text-xs font-bold flex gap-2 text-white uppercase">
+            <img src="./public/assets/images/svg/home/white-mail.svg" alt="mail" />contact
+          </p>
+        </a>
+
+        <div class="mobile_navbar_btn d-none ms-3 cursor-pointer">
+          <img onclick="showNav()" class="mobile_nav_toggle cursor_pointer" id="navToggleIcon"
+            src="/public/assets/images/svg/home/navbar-hamburguer.svg" alt="toggle" />
+        </div>
+      </div>
+    </nav>
+    <!-- Mobile Menu (Hidden on Small screens) -->
+    <div id="navBar"
+      class="bg-white absolute top-16 sm:top-24 lg:hidden left-[-100%] w-full z-50 !h-screen transition-all duration-300 ease-linear">
+      <div class="flex flex-col">
+        <p class="font-semibold cursor-pointer text-tundora text-lg pl-4 py-6  border-b-[2px] border-blue-600 open-popup"
+          id="open-popup-mobile">Log in</p>
+        <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray" href="/">How it
+          works</a>
+        <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray" href="/faq">Frequently
+          asked
+          questions</a>
+        <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray" href="/gallery">All
+          calculators</a>
+        <div class="relative border-b border-smokeGray">
+          <div class="relative w-full cursor-pointer" id="select-button">
+            <button class="pl-4 py-6">
+              <span class="w-full font-semibold text-tundora text-lg">Change language</span>
+              <span
+                class="absolute inset-y-0 right-[3%] flex items-center pr-2 pointer-events-none transform transition-transform"
+                id="dropdown-icon">
+                <img class="absolute rotate-180 w-[10px]" src="./public/assets/images/png/home/nav-mobile-select.png"
+                  alt="select" />
+              </span>
+            </button>
+          </div>
+          <div id="select-options" class="absolute mt-1 w-full hidden">
+            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="select-button">
+              <a rel="noreferance" href="#" class="block px-4 py-2 text-lg text-tundora" role="menuitem">English</a>
+              <a rel="noreferance" href="#" class="block px-4 py-2 text-lg text-tundora" role="menuitem">Deutsch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </header>
+  <!-- ==== 👨‍💻 Interactivity Section 👨‍💻 ==== -->
+  <section class="pt-2 lg:pt-12">
+    <div class="custom_container mx-auto">
+      <div class="bg-interactivitybox rounded-3xl w-full px-5 py-6 sm:p-10 lg:px-20 relative overflow-hidden">
+        <div class="sm:w-[500px] mx-auto lg:mx-0 lg:w-3/5 xl:w-3/4 relative z-10 text-center lg:text-start">
+          <h2 class="text-white font-extrabold text-xl sm:text-3md mb-4 lg:mb-0 leading-normal sm:leading-10">
+            Find a tool to improve your website’s interactivity!
+          </h2>
+          <p class="font-normal text-xs sm:text-sm text-wildSand lg:pe-20 xl:pe-32 mb-1 mt-2">
+            Explore the freedom to choose from a vast gallery of specialized
+            calculators, ready to be seamlessly embedded into your page.
+          </p>
+        </div>
+        <img class="hidden lg:block absolute right-0 top-0 max-w-[450px] xl:max-w-[400px] object-cover"
+          src="./public/assets/images/png/gallary/banner_galeria.png" alt="banner_galeria" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== 👨‍💻 All Calculators Section 👨‍💻 ==== -->
+  <div class="custom_container mx-auto">
+    <div class="flex flex-col lg:flex-row justify-between lg:gap-6 xl:gap-[15px]">
+      <!-- side box -->
+      <div class="w-full pt-8 lg:sticky top-0 left-0 h-full max-w-[150px] xl:max-w-[165px]">
+        <div
+          class="hidden lg:flex border border-alto border-solid rounded-xl items-center justify-between max-w-[145px]">
+          <div class="flex items-center gap-1 ps-3 pr-10 py-3 border-r border-alto border-solid">
+            <img src="./public/assets/images/svg/gallary/filters.svg" alt="sort_by" />
+            <p class="text-xs text-tundora">Filters</p>
+          </div>
+          <div class="px-2">
+            <a href="#">
+              <img src="./public/assets/images/svg/gallary/double_arrow.svg" alt="double_arrow" /></a>
+          </div>
+        </div>
+        <!-- accordian -->
+        <div class="hidden lg:flex flex-col gap-2.5 mt-4">
+          <!-- Category 1 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Category 2 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Category 3 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Category 4 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Category 5 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Category 6 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- calculators section -->
+      <div class="lg:max-w-[808px] xl:max-w-[885px] mt-4 sm:mt-8 relative overflow-hidden lg:overflow-visible">
+        <div
+          class="filter_sidebar bg-white w-[200px] px-8 py-12 rounded-2xl flex flex-col gap-2.5 absolute z-[51] left-[100%] top-[50px] lg:hidden">
+          <!-- Category 1 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Category 2 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Category 3 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Category 4 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Category 5 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Category 6 -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0 categoryButton">
+              Category
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="6" height="6" viewBox="0 0 6 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444"></path>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="pt-3 px-2 flex flex-col gap-1" role="none">
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#3d6eff]"
+                        d="M0.875 10.2812C0.875 10.6874 1.03633 11.0768 1.32349 11.364C1.61066 11.6512 2.00014 11.8125 2.40625 11.8125H11.5938C11.9999 11.8125 12.3893 11.6512 12.6765 11.364C12.9637 11.0768 13.125 10.6874 13.125 10.2812V6.07031H0.875V10.2812ZM2.67969 8.20312C2.67969 7.98556 2.76611 7.77692 2.91995 7.62308C3.07379 7.46924 3.28244 7.38281 3.5 7.38281H4.8125C5.03006 7.38281 5.23871 7.46924 5.39255 7.62308C5.54639 7.77692 5.63281 7.98556 5.63281 8.20312V8.75C5.63281 8.96756 5.54639 9.17621 5.39255 9.33005C5.23871 9.48389 5.03006 9.57031 4.8125 9.57031H3.5C3.28244 9.57031 3.07379 9.48389 2.91995 9.33005C2.76611 9.17621 2.67969 8.96756 2.67969 8.75V8.20312ZM11.5938 2.1875H2.40625C2.00014 2.1875 1.61066 2.34883 1.32349 2.63599C1.03633 2.92316 0.875 3.31264 0.875 3.71875V4.42969H13.125V3.71875C13.125 3.31264 12.9637 2.92316 12.6765 2.63599C12.3893 2.34883 11.9999 2.1875 11.5938 2.1875Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M3.416 1.55487C4.35575 1.12787 5.62363 0.875 7 0.875C8.37637 0.875 9.64425 1.12787 10.584 1.55487C11.4844 1.96437 12.25 2.61888 12.25 3.5C12.25 4.38112 11.4844 5.03563 10.584 5.44513C9.64425 5.87213 8.37637 6.125 7 6.125C5.62363 6.125 4.35575 5.87213 3.416 5.44513C2.51562 5.03563 1.75 4.38112 1.75 3.5C1.75 2.61888 2.51562 1.96437 3.416 1.55487Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 5.39062V6.12475C1.75 7.00588 2.51562 7.66037 3.416 8.06987C4.35575 8.496 5.62363 8.74975 7 8.74975C8.37637 8.74975 9.64425 8.49687 10.584 8.06987C11.4844 7.66037 12.25 7.00588 12.25 6.12475V5.39062C11.8501 5.76863 11.3715 6.04775 10.9463 6.24113C9.86825 6.73113 8.47175 6.99975 7 6.99975C5.52825 6.99975 4.13175 6.73113 3.05375 6.24113C2.6285 6.04863 2.14987 5.76863 1.75 5.39062Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 8.01562V8.74975C1.75 9.63087 2.51562 10.2854 3.416 10.6949C4.35575 11.1219 5.62363 11.3747 7 11.3747C8.37637 11.3747 9.64425 11.1219 10.584 10.6949C11.4844 10.2854 12.25 9.63087 12.25 8.74975V8.01562C11.8501 8.39362 11.3715 8.67275 10.9463 8.86613C9.86825 9.35613 8.47175 9.62475 7 9.62475C5.52825 9.62475 4.13175 9.35613 3.05375 8.86613C2.6285 8.67363 2.14987 8.39362 1.75 8.01562Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b79901]"
+                        d="M1.75 10.6406V11.3747C1.75 12.2559 2.51562 12.9104 3.416 13.3199C4.35575 13.7469 5.62363 13.9997 7 13.9997C8.37637 13.9997 9.64425 13.7469 10.584 13.3199C11.4844 12.9104 12.25 12.2559 12.25 11.3747V10.6406C11.8501 11.0186 11.3715 11.2978 10.9463 11.4911C9.86825 11.9811 8.47175 12.2497 7 12.2497C5.52825 12.2497 4.13175 11.9811 3.05375 11.4911C2.6285 11.2986 2.14987 11.0186 1.75 10.6406Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#dc6161]"
+                        d="M12.1173 5.92342L11.3193 3.52943C11.2036 3.18087 10.9809 2.87767 10.683 2.66289C10.3851 2.44811 10.027 2.33268 9.65974 2.33301H4.34091C3.97364 2.33268 3.6156 2.44811 3.31767 2.66289C3.01975 2.87767 2.79709 3.18087 2.68133 3.52943L1.88333 5.92342C1.67112 6.01222 1.4899 6.16176 1.36245 6.35325C1.23499 6.54475 1.16699 6.76964 1.16699 6.99967V9.91634C1.16699 10.3468 1.40266 10.719 1.75033 10.9214V12.2497C1.75033 12.4044 1.81178 12.5528 1.92118 12.6622C2.03058 12.7716 2.17895 12.833 2.33366 12.833H2.91699C3.0717 12.833 3.22007 12.7716 3.32947 12.6622C3.43887 12.5528 3.50033 12.4044 3.50033 12.2497V11.083H10.5003V12.2497C10.5003 12.4044 10.5618 12.5528 10.6712 12.6622C10.7806 12.7716 10.9289 12.833 11.0837 12.833H11.667C11.8217 12.833 11.9701 12.7716 12.0795 12.6622C12.1889 12.5528 12.2503 12.4044 12.2503 12.2497V10.9214C12.4273 10.8199 12.5744 10.6736 12.6768 10.4971C12.7792 10.3207 12.8333 10.1204 12.8337 9.91634V6.99967C12.8337 6.76964 12.7657 6.54475 12.6382 6.35325C12.5107 6.16176 12.3295 6.01222 12.1173 5.92342ZM4.34091 3.49968H9.65916C9.91058 3.49968 10.1334 3.65951 10.2127 3.89868L10.8579 5.83301H3.14274L3.78733 3.89868C3.82603 3.78247 3.90033 3.6814 3.99969 3.60978C4.09905 3.53817 4.21843 3.49965 4.34091 3.49968ZM3.20866 9.33301C3.09371 9.33297 2.9799 9.31029 2.87372 9.26627C2.76754 9.22225 2.67107 9.15774 2.58982 9.07644C2.50857 8.99513 2.44413 8.89862 2.40017 8.79241C2.35622 8.6862 2.33362 8.57237 2.33366 8.45742C2.3337 8.34248 2.35638 8.22867 2.4004 8.12249C2.44442 8.01631 2.50893 7.91984 2.59023 7.83859C2.67154 7.75733 2.76805 7.69289 2.87426 7.64894C2.98047 7.60499 3.0943 7.58239 3.20924 7.58242C3.44138 7.5825 3.66399 7.67479 3.82808 7.839C3.99218 8.0032 4.08432 8.22587 4.08424 8.45801C4.08416 8.69015 3.99187 8.91275 3.82767 9.07685C3.66347 9.24094 3.4408 9.33309 3.20866 9.33301ZM10.792 9.33301C10.677 9.33297 10.5632 9.31029 10.4571 9.26627C10.3509 9.22225 10.2544 9.15774 10.1732 9.07644C10.0919 8.99513 10.0275 8.89862 9.98351 8.79241C9.93956 8.6862 9.91695 8.57237 9.91699 8.45742C9.91703 8.34248 9.93971 8.22867 9.98373 8.12249C10.0278 8.01631 10.0923 7.91984 10.1736 7.83859C10.2549 7.75733 10.3514 7.69289 10.4576 7.64894C10.5638 7.60499 10.6776 7.58239 10.7926 7.58242C11.0247 7.5825 11.2473 7.67479 11.4114 7.839C11.5755 8.0032 11.6677 8.22587 11.6676 8.45801C11.6675 8.69015 11.5752 8.91275 11.411 9.07685C11.2468 9.24094 11.0241 9.33309 10.792 9.33301Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#2d932d]"
+                        d="M11.0777 1.16699H5.25546C4.60738 1.16699 4.08296 1.69141 4.08296 2.33949V5.62774L1.34013 8.33558C1.25795 8.41686 1.20176 8.52072 1.17871 8.63398C1.15566 8.74725 1.16678 8.86481 1.21065 8.97175C1.25452 9.07868 1.32918 9.17018 1.42514 9.23461C1.5211 9.29905 1.63404 9.33352 1.74963 9.33366V12.2503C1.74963 12.405 1.81109 12.5534 1.92049 12.6628C2.02988 12.7722 2.17825 12.8337 2.33296 12.8337H11.6663C11.821 12.8337 11.9694 12.7722 12.0788 12.6628C12.1882 12.5534 12.2496 12.405 12.2496 12.2503V2.33891C12.2496 1.69141 11.7258 1.16699 11.0777 1.16699ZM6.3708 8.81508V11.667H2.9163V8.41899L4.65871 6.69874L6.3708 8.45049V8.81508ZM7.58296 5.25033H6.4163V4.08366H7.58296V5.25033ZM9.9163 9.91699H8.74963V8.75033H9.9163V9.91699ZM9.9163 7.58366H8.74963V6.41699H9.9163V7.58366ZM9.9163 5.25033H8.74963V4.08366H9.9163V5.25033Z"
+                        fill="#999999" />
+                      <path d="M4.08301 8.75H5.24967V9.91667H4.08301V8.75Z" fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+                <a href="#"
+                  class="block text-xs text-tundora opacity-70 duration-200 transition-all ease-linear hover:opacity-100">
+                  <div class="flex items-center gap-1.5 group">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M8.3125 2.91699C8.3125 2.49233 8.31133 2.21699 8.2845 2.01516C8.25883 1.82558 8.21742 1.76608 8.18417 1.73283C8.15092 1.69958 8.09142 1.65816 7.90183 1.63249C7.69942 1.60566 7.42467 1.60449 7 1.60449C6.57533 1.60449 6.3 1.60566 6.09817 1.63249C5.90858 1.65816 5.84908 1.69958 5.81583 1.73283C5.78258 1.76608 5.74117 1.82558 5.7155 2.01516C5.68867 2.21758 5.6875 2.49233 5.6875 2.91699V12.3962H8.3125V2.91699Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M11.8125 8.45866C11.8125 8.34263 11.7664 8.23135 11.6844 8.1493C11.6023 8.06725 11.491 8.02116 11.375 8.02116H9.625C9.50897 8.02116 9.39769 8.06725 9.31564 8.1493C9.23359 8.23135 9.1875 8.34263 9.1875 8.45866V12.3962H11.8125V8.45866Z"
+                        fill="#999999" />
+                      <path class="group-hover:fill-[#b025d6]"
+                        d="M4.8125 12.3962V5.54199C4.8125 5.42596 4.76641 5.31468 4.68436 5.23263C4.60231 5.15059 4.49103 5.10449 4.375 5.10449H2.625C2.50897 5.10449 2.39769 5.15059 2.31564 5.23263C2.23359 5.31468 2.1875 5.42596 2.1875 5.54199V12.3962H4.8125Z"
+                        fill="#999999" />
+                    </svg>
+
+
+                    <span>Sub-category</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- input box -->
+        <div class="flex lg:block items-center gap-2 sm:gap-2.5">
+          <div
+            class="border border-alto border-solid rounded-xl flex items-center lg:hidden min-w-[130px] sm:min-w-[150px]">
+            <div class="flex items-center gap-1 ps-3 pr-6 sm:pr-10 py-3 border-r border-alto border-solid">
+              <img src="./public/assets/images/svg/gallary/filters.svg" alt="sort_by" />
+              <p class="text-xs text-tundora">Filters</p>
+            </div>
+            <div class="px-2 open_filter_sidebar cursor-pointer">
+              <img src="./public/assets/images/svg/gallary/double_arrow.svg" alt="double_arrow" />
+            </div>
+          </div>
+          <div class="border border-alto border-solid rounded-xl flex items-center justify-between w-full">
+            <div class="lg:inlin-flex items-center gap-1.5 px-3 py-2 border-r border-alto border-solid lg:min-w-28">
+              <div class="relative sm:inline-block text-left group">
+                <div>
+                  <button id="dropdown-toggle" type="button"
+                    class="inline-flex justify-center items-center gap-2 w-full bg-white text-tundora text-xs font-normal outline-none border-0 transition-all duration-200 ease-linear group-hover:text-bostonBlue"
+                    aria-expanded="false" aria-haspopup="true">
+                    <img src="./public/assets/images/svg/gallary/sort_by.svg" alt="sort_by" />
+                    <span class="hidden lg:inline-flex justify-center items-center gap-2">
+                      Sort by
+                      <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="transition-all duration-200 ease-linear group-hover:fill-bostonBlue"
+                          d="M2.81915 5.05712L0.389048 1.01781L5.10346 0.918881L2.81915 5.05712Z" fill="#444444" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div id="dropdown-menu"
+                  class="hidden absolute left-[-12px] z-10 top-9 w-[125px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                  <div class="overflow-hidden shadow-[1px_1px_4px_2px_#00000026] rounded-md" role="none">
+                    <a href="#"
+                      class="inline-flex items-center gap-3 px-4 py-2 text-xs text-tundora transition-all duration-200 hover:bg-[#f5f5f5] w-full"
+                      role="menuitem" onclick="closeDropdown()">
+                      <img src="./public/assets/images/svg/gallary/sort_by_stor.svg" alt="sort_by_stor"> Highlighted</a>
+                    <a href="#"
+                      class="inline-flex items-center gap-3 px-4 py-2 text-xs text-tundora transition-all duration-200 hover:bg-[#f5f5f5] w-full"
+                      role="menuitem" onclick="closeDropdown()">
+                      <img src="./public/assets/images/svg/gallary/sort_by_heart.svg" alt="sort_by_stor"> Favorites </a>
+                    <a href="#"
+                      class="inline-flex items-center gap-3 px-4 py-2 text-xs text-tundora transition-all duration-200 hover:bg-[#f5f5f5] w-full"
+                      role="menuitem" onclick="closeDropdown()">
+                      <img src="./public/assets/images/svg/gallary/sort_by_popular.svg" alt="sort_by_stor"> Popular </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative w-full h-full rounded-xl overflow-hidden">
+              <input
+                class="w-full py-2 ps-3 pr-2 sm:ps-3 sm:pr-10 outline-none border-0 text-tundora text-xs placeholder:text-alto"
+                type="text" placeholder="Search calculator" />
+              <a href="#"><img class="absolute right-2 sm:right-[13px] top-1/2 -translate-y-1/2"
+                  src="./public/assets/images/svg/gallary/search_icon.svg" alt="search_icon" /></a>
+            </div>
+          </div>
+        </div>
+        <!-- category section -->
+        <div>
+          <div class="my-2 sm:mt-4 flex items-center gap-1">
+            <p class="text-tundora text-2xs font-semibold">Sub-category</p>
+            <img src="/public/assets/images/svg/gallary/right_light_arrow.svg" alt="right_light_arrow">
+            <p class="text-tundora text-2xs opacity-50 font-semibold">
+              category
+            </p>
+          </div>
+        </div>
+        <div class="overflow-auto category_webkit_scrollbar">
+          <div class="flex items-center justify-between gap-3 min-w-[885px]">
+            <button
+              class="hover:bg-calypso bg-alto text-tundora transition-all duration-200 ease-linear text-2xs font-semibold py-[5px] px-2 rounded-xl">
+              Sub-category
+            </button>
+            <button
+              class="hover:bg-calypso bg-alto text-tundora transition-all duration-200 ease-linear text-2xs font-semibold py-[5px] px-2 rounded-xl">
+              Sub-category
+            </button>
+            <button
+              class="hover:bg-calypso bg-alto text-tundora transition-all duration-200 ease-linear text-2xs font-semibold py-[5px] px-2 rounded-xl">
+              Sub-category
+            </button>
+            <button
+              class="hover:bg-calypso bg-alto text-tundora transition-all duration-200 ease-linear text-2xs font-semibold py-[5px] px-2 rounded-xl">
+              Sub-category
+            </button>
+            <button
+              class="hover:bg-calypso bg-alto text-tundora transition-all duration-200 ease-linear text-2xs font-semibold py-[5px] px-2 rounded-xl">
+              Sub-category
+            </button>
+            <button
+              class="hover:bg-calypso bg-alto text-tundora transition-all duration-200 ease-linear text-2xs font-semibold py-[5px] px-2 rounded-xl">
+              Sub-category
+            </button>
+            <button
+              class="hover:bg-calypso bg-alto text-tundora transition-all duration-200 ease-linear text-2xs font-semibold py-[5px] px-2 rounded-xl">
+              Sub-category
+            </button>
+            <button
+              class="hover:bg-calypso bg-alto text-tundora transition-all duration-200 ease-linear text-2xs font-semibold py-[5px] px-2 rounded-xl">
+              Sub-category
+            </button>
+            <button
+              class="hover:bg-calypso bg-alto text-tundora transition-all duration-200 ease-linear text-2xs font-semibold py-[5px] px-2 rounded-xl">
+              Sub-category
+            </button>
+          </div>
+        </div>
+
+        <!-- calculators section -->
+        <div class="xl:mb-7 my-4 sm:my-6 flex items-center justify-between">
+          <h2 class="font-semibold text-bostonBlue text-lg">
+            All calculators
+          </h2>
+          <div class="flex items-center gap-4 sm:gap-6">
+            <p class=" text-tundora text-2xs">100 of 170</p>
+            <button class="group">
+              <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="group-hover:stroke-black duration-200" d="M5 1L1 5L5 9" stroke="#A5A6A9" stroke-width="1.4"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div
+              class="text-tundora text-2xs placeholder:text-tundora border border-alto border-solid rounded-xl p-2 text-center max-w-12 outline-none px-[22px] py-[7px]">
+              <p>1</p>
+            </div>
+            <button class="group">
+              <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="group-hover:stroke-black duration-200" d="M1 9L5 5L1 1" stroke="#A5A6A9" stroke-width="1.4"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- grid box section -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gallery_grid_gap gap-2.5 pb-20">
+          <div
+            class=" after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/dog.png" alt="dog" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Calculator for dogs age
+            </p>
+          </div>
+          <div
+            class=" after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/ac.png" alt="ac" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Air conditioning & cooling load calculation
+            </p>
+          </div>
+          <div
+            class="mt-8 sm:mt-0  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/machine.png" alt="machine" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Plastics Technology Calculator Industry Extrusion
+            </p>
+          </div>
+          <div
+            class="mt-8 md:mt-0  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/bulb.png" alt="bulb" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Save electricity costs, electricity savings calculator
+            </p>
+          </div>
+
+          <!-- grid line 2 -->
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/dog.png" alt="dog" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Calculate optimal pond filter performance
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/ac.png" alt="ac" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Which is better - the Toniebox or the Tigerbox?
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/machine.png" alt="machine" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Calculate PV inverter sizing
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/bulb.png" alt="bulb" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Calculate price increase
+            </p>
+          </div>
+
+          <!-- grid line 3 -->
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/dog.png" alt="dog" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Cost comparison: how much does a camping ...
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/ac.png" alt="ac" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Cost house purchase and calculate service charges
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/machine.png" alt="machine" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Planning cost calculator of a pond pump for the garden
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/bulb.png" alt="bulb" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Planning cost calculator of a pond pump for the garden
+            </p>
+          </div>
+
+          <!-- grid line 4 -->
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/dog.png" alt="dog" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Calculate parquet cost and laminate need
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/ac.png" alt="ac" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Koi diseases calculate treatment costs, optimal...
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/machine.png" alt="machine" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Cost comparison: how much does a camping vacation cost?
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/bulb.png" alt="bulb" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Investment luxury real estate online calculator
+            </p>
+          </div>
+
+          <!-- grid line 5 -->
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/dog.png" alt="dog" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Emergency Generator Fuel Consumption Calculator
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/ac.png" alt="ac" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Air conditioning & cooling load calculation
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/machine.png" alt="machine" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Plastics Technology Calculator Industry Extrusion
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/bulb.png" alt="bulb" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Save electricity costs, electricity savings calculator
+            </p>
+          </div>
+
+          <!-- grid line 6 -->
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/dog.png" alt="dog" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Calculate optimal pond filter performance
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/ac.png" alt="ac" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Which is better - the Toniebox or the Tigerbox?
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/machine.png" alt="machine" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Calculate PV inverter sizing
+            </p>
+          </div>
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/bulb.png" alt="bulb" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Calculate price increase
+            </p>
+          </div>
+
+          <!-- grid line 7 -->
+          <div
+            class="mt-8  after:transition-all after:duration-200 after:ease-linear after:w-full after:h-full after:bg-white after:bg-opacity-0 after:hover:bg-opacity-50 after:top-0 after:left-0 after:absolute after:content-[''] after:rounded-xl cursor-pointer relative border-2 rounded-xl border-solid border-bostonBlue">
+            <img class=" h-full w-full object-cover rounded-[10px] transition-all duration-200 ease-linear  "
+              src="./public/assets/images/png/gallary/ac.png" alt="dog" />
+            <p class="font-semibold text-[10px] text-center pt-1 xl:px-7 text-tundora">
+              Cost comparison: how much does a camping vacation cost?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- next-pages -->
+    <div class="mb-16 sm:mb-14 sm:flex gap-24 items-center justify-end">
+      <a href="/individual"
+        class="inline-block text-center font-medium text-bostonBlue text-xs sm:text-sm leading-normal md:leading-[18px] hover:bg-bostonBlue hover:text-white transition-all duration-200 ease-linear px-9 pt-2 pb-2.5 border border-solid border-bostonBlue rounded-xl w-full sm:w-auto">
+        Next page
+      </a>
+      <div class="flex items-center justify-center gap-6 mt-4 lg:mt-0">
+        <p class=" text-tundora text-2xs">100 of 170</p>
+        <button class="group">
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="group-hover:stroke-black duration-200" d="M5 1L1 5L5 9" stroke="#A5A6A9" stroke-width="1.4"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div
+          class="text-tundora text-2xs placeholder:text-tundora border border-alto border-solid rounded-xl p-2 text-center max-w-12 outline-none px-[22px] py-[7px]">
+          <p>1</p>
+        </div>
+        <button class="group">
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="group-hover:stroke-black duration-200" d="M1 9L5 5L1 1" stroke="#A5A6A9" stroke-width="1.4"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER START -->
+  <footer class="bg-shark">
+    <div class="custom_container">
+      <div class="flex flex-wrap justify-between  pt-12 md:pt-10">
+        <div class="w-full lg:w-3/12">
+          <a href="/"><img height="30px" width="164px" src="/assets/images/png/home/page-logo.png"
+              alt="footer logo"></a>
+          <p class="font-bold text-2xs sm:text-xs text-wildSand pt-7 md:pt-[15px]">B2B monthly newsletter
+          </p>
+          <p class="font-normal text-2xs sm:text-xs text-wildSand lg:max-w-[210px] opacity-90">The
+            latest
+            trends and topics about
+            online calculators
+          </p>
+          <form class="pt-3 lg:pt-2 flex flex-col items-start">
+            <input
+              class="w-[172px] sm:w-[233px] text-2xs sm:text-xs text py-[5px] sm:py-2 px-2 sm:px-3 border bg-transparent text-white placeholder:text-white border-wildSand border-opacity-50 rounded-[7px] sm:rounded-xl"
+              type="email" required placeholder="emma@example.com">
+            <button type="submit"
+              class="text-sm font-bold text-white py-[10px] sm:py-3 px-5 sm:px-8 border border-opacity-50 border-wildSand rounded-[7px] sm:rounded-xl mt-3 hover:bg-bostonBlue duration-300 hover:border-bostonBlue">Send</button>
+          </form>
+        </div>
+        <div class="w-full lg:w-8/12 flex justify-between flex-wrap pt-5 lg:pt-0">
+          <div class="w-1/2 sm:w-auto">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal opacity-80">Menu</li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/">Home</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/">How
+                  it
+                  works</a></li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/faq">FAQ</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">All
+                  calculators</a></li>
+            </ul>
+          </div>
+          <div class="w-1/2 sm:w-auto">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-[30px]"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/faq">Contact
+                  Us</a></li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/faq">Order
+                  process</a></li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/gallery">Product
+                  info</a></li>
+            </ul>
+          </div>
+          <div class="w-1/2 sm:w-auto pt-8 sm:pt-0">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal  opacity-80">Legal</li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/impressum">Impressum</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/terms">Terms
+                  of
+                  use</a></li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/dataProtection">Data
+                  Protection</a></li>
+            </ul>
+          </div>
+          <div class="w-1/2 sm:w-auto pt-8 sm:pt-0">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal opacity-80">Calculation tools</li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">Price
+                  calculator</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">Calculate
+                  tariffs</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">Excel
+                  calculator</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/gallery">More
+                  tools</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p
+        class="lg:text-end text-center text-opacity-50 text-alto text-2xs sm:text-xs font-normal pt-[68px] sm:pt-10 md:pt-6 lg:pt-3 pb-3">
+        ©2016-<span id="year-change"></span>
+        Mein-Onlinerechner.com Online
+        Calculators</p>
+    </div>
+  </footer>
+  <button onclick="topFunction()" id="myBtn" title="Go to top" class="fixed right-0 bottom-0 m-5 z-[99] back-to-top">
+    <span class="bg-interactivitybox p-2 inline-block rounded-full border-2 border-white"><svg width="24" height="24"
+        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 11L12 5L18 11M6 19L12 13L18 19" stroke="#fff" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg></span>
+  </button>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/index.js"></script>
+  <script>
+    function showNav() {
+      var navBar = document.getElementById("navBar");
+      var body = document.getElementsByTagName("body")[0];
+      var navToggleIcon = document.getElementById("navToggleIcon");
+
+      navBar.classList.toggle("show_nav");
+      body.classList.toggle("nav_mobile_scroll");
+      navToggleIcon.src = navBar.classList.contains("show_nav") ?
+        "/assets/images/svg/home/nav-cross.svg" :
+        "/assets/images/svg/home/navbar-hamburguer.svg";
+    }
+  </script>
+  <script>
+    function closeDropdown() {
+      const dropdownToggle = document.getElementById("dropdown-toggle");
+      const dropdownMenu = document.getElementById("dropdown-menu");
+
+      dropdownToggle.setAttribute("aria-expanded", "false");
+      dropdownMenu.classList.add("hidden");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownToggle = document.getElementById("dropdown-toggle");
+      const dropdownMenu = document.getElementById("dropdown-menu");
+
+      dropdownToggle.addEventListener("click", function () {
+        const expanded =
+          dropdownToggle.getAttribute("aria-expanded") === "true" || false;
+        dropdownToggle.setAttribute("aria-expanded", !expanded);
+        dropdownMenu.classList.toggle("hidden");
+      });
+    });
+  </script>
+
+
+  <!-- ACCRODIAN SIDEBAR -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const openFilterSidebar = document.querySelector(".open_filter_sidebar");
+      const filterSidebar = document.querySelector(".filter_sidebar");
+
+      openFilterSidebar.addEventListener("click", function () {
+        filterSidebar.classList.toggle("filter-sidebar-open");
+      });
+
+      // Add event listener to close the sidebar when clicking outside of it
+      document.addEventListener("click", function (event) {
+        // Check if the clicked element is not inside the filter sidebar
+        if (!filterSidebar.contains(event.target) && !openFilterSidebar.contains(event.target)) {
+          // Close the sidebar
+          filterSidebar.classList.remove("filter-sidebar-open");
+        }
+      });
+    });
+  </script>
+
+
+  <!-- ACCORDIAN JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const accSingleTriggers = document.querySelectorAll(
+        ".js-acc-single-trigger"
+      );
+      accSingleTriggers.forEach((trigger) =>
+        trigger.addEventListener("click", toggleAccordion)
+      );
+
+      // Open the second accordion item by default
+      const secondAccordionItem =
+        document.querySelectorAll(".js-acc-item")[1];
+      secondAccordionItem.classList.add("is-open");
+      const content = secondAccordionItem.querySelector(
+        ".accordion-single-content"
+      );
+      content.style.maxHeight = "120px";
+
+      // Rotate the arrow icon for the second accordion item
+      const arrowIcon = secondAccordionItem.querySelector(".arrow-icon");
+      arrowIcon.classList.add("accordion_arrow_rotate");
+    });
+
+    function toggleAccordion() {
+      const items = document.querySelectorAll(".js-acc-item");
+      const thisItem = this.parentNode;
+      items.forEach((item) => {
+        if (thisItem == item) {
+          thisItem.classList.toggle("is-open");
+          const content = thisItem.querySelector(".accordion-single-content");
+          content.style.maxHeight = content.style.maxHeight ?
+            null :
+            content.scrollHeight + "px";
+
+          // Rotate the arrow icon
+          const arrowIcon = thisItem.querySelector(".arrow-icon");
+          arrowIcon.classList.toggle("accordion_arrow_rotate");
+
+          return;
+        }
+        item.classList.remove("is-open");
+        item.querySelector(".accordion-single-content").style.maxHeight =
+          null;
+
+        // Reset the arrow icon rotation
+        const arrowIcon = item.querySelector(".arrow-icon");
+        arrowIcon.classList.remove("accordion_arrow_rotate");
+      });
+    }
+    // NAV CUSTOM SELECT JS
+    document.addEventListener("DOMContentLoaded", function () {
+      const selectButton = document.getElementById("select-button");
+      const selectOptions = document.getElementById("select-options");
+      const dropdownIcon = document.getElementById("dropdown-icon");
+
+      selectButton.addEventListener("click", function () {
+        selectOptions.classList.toggle("hidden");
+        dropdownIcon.classList.toggle("rotate-180");
+      });
+
+      selectOptions.querySelectorAll("a").forEach((option) => {
+        option.addEventListener("click", function () {
+          const selectedOption = option.textContent.trim();
+          selectButton.querySelector("span").textContent = selectedOption;
+          selectOptions.classList.add("hidden");
+        });
+      });
+
+      // Close the dropdown when clicking outside of it
+      window.addEventListener("click", function (e) {
+        if (!selectButton.contains(e.target)) {
+          selectOptions.classList.add("hidden");
+          dropdownIcon.classList.remove("rotate-180");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

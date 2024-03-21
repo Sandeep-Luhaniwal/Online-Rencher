@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Primary Meta Tags -->
+  <title>Online-Renchers</title>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://online-rencher.web.app/" />
+  <meta property="og:title" content="Customizable online 
+calculators for your website" />
+  <meta property="og:description" content="Empower your site through effortless calculations
+with interactive buttons, engaging tools and more" />
+  <meta property="og:image" content="/public/assets/homepage-meta-img.webp" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://online-rencher.web.app/" />
+  <meta property="twitter:title" content="Customizable online 
+calculators for your website" />
+  <meta property="twitter:description" content="Empower your site through effortless calculations
+with interactive buttons, engaging tools and more" />
+  <meta property="twitter:image" content="/public/assets/homepage-meta-img.webp" />
+
+  <!-- Meta Tags Generated with https://metatags.io -->
+  <link rel="stylesheet" href="/public/assets/css/style.css" />
+  <link rel="shortcut icon" href="./public/assets/images/svg/home/favicon.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+</head>
+
+<body>
+  <!-- POPUP -->
+  <div id="popup-parent" class="absolute backdrop-blur-md w-screen h-screen z-[52] px-3 hidden">
+    <div class="h-full flex justify-center items-center">
+      <div id="overlay" class="fixed top-0 left-0 h-screen w-screen z-0"></div>
+      <button id="close-popup"
+        class="absolute z-[50] top-[3%] sm:top-[5%] right-[5%] hover:rotate-180 text-black transition-all duration-300 font-bold">
+        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div
+        class="relative z-[1] flex w-full max-w-[500px] sm:max-w-[690px] popup mx-auto rounded-xl shadow-whiteShadow bg-white">
+        <!-- Popup content -->
+        <form class="w-full sm:w-1/2 lg:py-[30px] p-5 lg:px-10">
+          <img class="max-w-[189px] mx-auto mb-5 rounded-e-xl" src="./public/assets/images/png/home/page-popup-logo.png"
+            alt="page-popup-logo" />
+          <h3 class="text-xl font-semibold text-shark text-center sm:text-start">
+            Log in to explore and enjoy all our features.
+          </h3>
+          <label class="text-2xs sm:text-xs text-shark block mb-2 font-normal mt-4 lg:mt-6">Username or email</label>
+          <input required
+            class="py-2 placeholder:absolute placeholder:top-[30%] sm:placeholder:top-[25%] px-3 border-[1px] border-tundora active:outline-bostonBlue focus-visible:outline-bostonBlue focus-visible:!outline-[1px] rounded-md placeholder:text-rollingStone placeholder:text-xs placeholder:sm:text-sm placeholder:font-normal w-full"
+            type="email" placeholder="emma@example.com" />
+          <label class="text-2xs sm:text-xs text-shark block my-2 font-normal">Password</label>
+          <input required
+            class="py-2 placeholder:absolute placeholder:top-[30%] sm:placeholder:top-[25%] px-3 border-[1px] border-tundora active:outline-bostonBlue  focus-visible:outline-bostonBlue focus-visible:!outline-[1px] rounded-md placeholder:text-rollingStone placeholder:text-xs placeholder:sm:text-sm placeholder:font-normal w-full"
+            type="password" placeholder="password" />
+          <button
+            class="py-[10px] px-7 bg-pelorousBlue text-white font-bold text-2xs sm:text-xs mt-4 rounded-md block w-full hover:shadow-loginBtn duration-300">
+            Continue
+          </button>
+          <p class="text-rollingStone opacity-60 font-normal text-2xs mt-4">
+            By continuing, you agree to the
+            <a rel="references" href="#"
+              class="border-b-rollingStone hover:text-azure border-b transition-all duration-300">Terms and Conditions
+              of use</a>. Please
+            refer to our
+            <a rel="references" href="#"
+              class="border-b-rollingStone hover:text-azure border-b transition-all duration-300">Privacy Policy</a>.
+          </p>
+          <a rel="references" href="#"
+            class="text-azure font-normal text-2xs mt-4 hover:opacity-70 transition-all duration-300">Forgot your
+            password?</a>
+        </form>
+        <!-- Image section (hidden on small screens) -->
+        <div class="w-1/2 hidden sm:block">
+          <img class="w-full h-full" src="./public/assets/images/png/home/log-in-popup-img.png"
+            alt="log-in-popup-img" />
+        </div>
+        <!-- Close icon -->
+      </div>
+    </div>
+  </div>
+  <!-- HERO SECTION START HERE -->
+  <section
+    class="lg:h-[590px] xl:h-[760px] lg:min-h-[70vh] hero_bg_position flex flex-col lg:bg-[url('/public/assets/images/png/home/hero_tab_bg.png')] xl:bg-[url('/public/assets/images/png/home/hero-background.png')] bg-no-repeat bg-cover pb-[54px]">
+    <header>
+      <nav class="!py-3 flex justify-between px-6 lg:max-w-[1108px] mx-auto">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="/">
+            <img class="h-[60px] hidden lg:inline pr-1" src="/public/assets/images/png/home/page-logo.png" alt="logo" />
+          </a>
+          <a rel="noreferance"
+            class="text-white text-xs font-semibold hidden lg:inline-block hover:bg-lightSky rounded-xl transition-all duration-300 py-[6px] px-3 leading-normal"
+            href="/">How it works</a>
+          <a rel="noreferance"
+            class="text-white text-xs font-semibold hidden lg:inline-block hover:bg-lightSky rounded-xl transition-all duration-300 py-[6px] px-3 leading-normal"
+            href="/faq">FAQ's</a>
+          <a rel="noreferance"
+            class="text-white text-xs font-semibold hidden lg:inline-block hover:bg-lightSky rounded-xl transition-all duration-300 py-[6px] px-3 leading-normal"
+            href="/gallery">All calculators</a>
+        </div>
+
+        <!-- Menu -->
+        <div class="hidden  lg:flex items-center">
+          <div>
+            <div class="flex">
+              <p id="open-popup-desktop"
+                class="text-white cursor-pointer flex gap-1 open-popup hover:bg-lightSky items-center px-3 text-xs font-medium rounded-xl transition-all duration-300 leading-normal">
+                <img src="/public/assets/images/svg/home/login-icon.svg" alt="login" />Log in
+              </p>
+              <a rel="noreferance" href="#"
+                class="text-white me-2 flex gap-1 hover:bg-lightSky rounded-xl transition-all duration-300 items-center px-3 text-xs font-medium leading-normal"><img
+                  src="/public/assets/images/svg/home/language-icon.svg" alt="language" />EN</a>
+              <div class="border flex gap-2 items-center py-[6px] px-4 border-white rounded-full">
+                <img class="h-[12px] cursor-pointer" src="/public/assets/images/svg/home/search.svg"
+                  alt="search icon" />
+                <input
+                  class="border-0 text-white placeholder:text-white placeholder:opacity-70 text-xs bg-transparent outline-none"
+                  placeholder="Search" type="text" />
+              </div>
+              <a href="mailto:contact@gmail.com"
+                class="bg-white flex gap-2 ms-4 items-center hover:flex transition-all duration-300 hover:justify-center hover:shadow-navBtnShadow w-[176px] group hover:bg-navBtnBg py-[6px] px-4 rounded-xl">
+                <img class="h-[12px] transition-all duration-300 group-hover:hidden"
+                  src="/public/assets/images/svg/home/mail-icon.svg" alt="mail icon" />
+                <p class="text-xs font-medium transition-all duration-300 group-hover:hidden text-azure leading-none">
+                  <span>contact@gmail.com</span>
+                </p>
+                <p
+                  class="text-xs hidden transition-all duration-300 group-hover:block text-white font-medium leading-none">
+                  <span>Let's Talk</span>
+                </p>
+                <img class="h-[12px] hidden transition-all duration-300 group-hover:block"
+                  src="/public/assets/images/svg/home/white-mail.svg" alt="mail icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Menu Button (Hidden on Medium and above screens) -->
+        <div class="lg:hidden flex items-center relative z-[51]">
+          <a rel="noreferance" href="mailto:contact@gmail.com"
+            class="bg-bostonBlue !h-[34px] flex gap-2 items-center py-[9px] px-3 rounded-full cursor-pointer">
+            <p class="text-xs font-bold flex gap-2 text-white uppercase">
+              <img src="./public/assets/images/svg/home/white-mail.svg" alt="mail" />contact
+            </p>
+          </a>
+
+          <div class="mobile_navbar_btn d-none cursor-pointer ms-3">
+            <img onclick="showNav()" class="mobile_nav_toggle cursor_pointer" id="navToggleIcon"
+              src="/public/assets/images/svg/home/navbar-hamburguer.svg" alt="toggle" />
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile Menu (Hidden on Small screens) -->
+      <div id="navBar"
+        class="bg-white absolute top-[10%] lg:hidden left-[-100%] w-full z-50 !h-screen transition-all duration-300 ease-linear">
+        <div class="flex flex-col">
+          <p id="open-popup-mobile"
+            class="font-semibold text-tundora text-lg pl-4 py-6 cursor-pointer  border-b-[2px] border-blue-600 open-popup">
+            Log
+            in</p>
+          <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray" href="/">How it
+            works</a>
+          <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray" href="/faq">Frequently
+            asked
+            questions</a>
+          <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray" href="/gallery">All
+            calculators</a>
+          <div class="relative border-b border-smokeGray">
+            <div class="relative w-full cursor-pointer" id="select-button">
+              <button class="pl-4 py-6">
+                <span class="w-full font-semibold text-tundora text-lg">Change language</span>
+                <span
+                  class="absolute inset-y-0 right-[3%] flex items-center pr-2 pointer-events-none transform transition-transform"
+                  id="dropdown-icon">
+                  <img class="absolute rotate-180 w-[10px]" src="./public/assets/images/png/home/nav-mobile-select.png"
+                    alt="select" />
+                </span>
+              </button>
+            </div>
+            <div id="select-options" class="absolute mt-1 w-full hidden">
+              <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="select-button">
+                <a rel="noreferance" href="#" class="block px-4 py-2 text-lg text-tundora" role="menuitem">English</a>
+                <a rel="noreferance" href="#" class="block px-4 py-2 text-lg text-tundora" role="menuitem">Deutsch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container custom_container custom_container grow items-start h-full lg:pt-6 xl:pt-11">
+      <div
+        class="flex flex-wrap justify-center lg:justify-between max-w-[850px] xl:max-w-[unset] mx-auto h-full 2xl:items-center">
+        <div class="lg:w-6/12 flex flex-col">
+          <h2
+            class="lg:text-white text-bostonBlue font-extrabold text-3xl pt-10 sm:pt-12 lg:pt-0 sm:text-2lg xl:text-[45px] text-center lg:text-start max-w-[390px] md:max-w-[550px] mx-auto lg:mx-[unset] lg:leading-[56px]">
+            Customizable online calculators for your website
+          </h2>
+          <p
+            class="xl:text-xl sm:text-base text-sm text-tundora lg:text-offWhite lg:mx-[unset] pt-5 pb-5 max-w-[380px] xl:max-w-[480px] mx-auto sm:pt-[26px]  text-center lg:text-start">
+            Empower your site through effortless calculations with interactive
+            buttons, engaging tools and more
+          </p>
+          <div class="hidden lg:inline-block">
+            <a href="#"
+              class="bg-white flex w-[180px] group mx-auto hover:shadow-heroBtn transition-all duration-200 lg:ms-0 mt-6 gap-2 items-center py-2 px-3 rounded-xl">
+              <div class="flex items-center">
+                <span class="h-[2px] group-hover:w-5 transition-all duration-200 w-[15px] bg-bostonBlue"></span>
+                <img class="h-3 translate-x-[-6px]" src="./public/assets/images/svg/home/hero-btn-arrow.svg"
+                  alt="mail" />
+              </div>
+              <p class="text-sm font-bold text-bostonBlue mt-[-2px]">
+                Request an offer
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="lg:w-6/12  sm:w-10/12 w-11/12 md:w-8/12 lg:max-w-[480px] xl:max-w-[523px]">
+          <img src="./public/assets/images/png/home/hero-img.png" alt="hero image" />
+          <a href="#" class="bg-bostonBlue flex w-[180px] group mx-auto hover:shadow-heroBtn transition-all duration-200
+            lg:ms-0 mt-6 gap-2 items-center py-[10px] px-3 rounded-xl lg:hidden">
+            <div class="flex items-center">
+              <span class="h-[2px] group-hover:w-3 transition-all duration-200 w-[7px] bg-white"></span>
+              <img class="h-4 translate-x-[-6px]" src="./public/assets/images/svg/home/btn-right-arrow.svg"
+                alt="mail" />
+            </div>
+            <p class="text-sm font-bold text-white text-nowrap mt-[-2px]">
+              Request an offer
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- HOW TO WORK SECTION -->
+  <section class="py-[60px] lg:pt-[70px] lg:pb-[90px]" id="its-work">
+    <div class="container custom_container">
+      <div class="text-center font-bold text-bostonBlue text-2md md:text-4xl">
+        How it works?
+      </div>
+      <p
+        class="text-center text-base text-tundora py-6 md:pt-5 sm:pb-16 custom-xxl:pb-[75px] max-w-[500px] mx-auto px-4">
+        Incorporating dynamic calculators into your site is a breeze with our
+        <span class="font-extrabold sm:font-normal">straightforward 1-2-3 process.</span>
+      </p>
+      <div class="flex flex-wrap flex-col sm:flex-row items-center sm:justify-center lg:justify-between relative">
+        <img class="absolute top-1/2 left-[27%] hidden lg:block -translate-y-1/2 z-[-1]"
+          src="/public/assets/images/png/home/work-card-arrow.png" alt="arrow" />
+        <img class="absolute top-1/2 right-[29%] hidden lg:block -translate-y-1/2 z-[-1]"
+          src="/public/assets/images/png/home/work-card-arrow.png" alt="arrow" />
+        <div class="xl:w-[300px] lg:w-4/12 sm:w-6/12 max-w-[258px] hover:scale-105 transition-all duration-300
+          sm:max-w-[unset] sm:[7px] xl:pr-[unset] sm:pe-3">
+          <div
+            class="p-6 bg-white  min-h-[230px] shadow-workBox flex flex-col items-center sm:items-start rounded-xl h-full ">
+            <h3
+              class="bg-governorBay h-[48px] w-[48px] text-white font-bold text-3xl rounded-2xl flex justify-center items-center">
+              1
+            </h3>
+            <h3 class="text-3xs xl:text-2xl font-semibold pt-[6px] pb-[13px]">
+              Create a project
+            </h3>
+            <p class="sm:text-base text-sm text-shark lg:leading-[20px] text-center sm:text-start">
+              Provide a project name and a short description. Include 3 keywords
+              and your homepage.
+            </p>
+          </div>
+        </div>
+        <div
+          class="xl:w-[300px] lg:w-4/12 sm:w-6/12 z-[2] hover:scale-105 transition-all duration-300 max-w-[258px] sm:max-w-[unset] sm:pl-3 lg:px-3 pt-[55px] sm:pt-0 xl:px-[unset]">
+          <div
+            class="p-6 shadow-workBox rounded-xl min-h-[230px] bg-white h-full flex flex-col items-center sm:items-start">
+            <h3
+              class="bg-puertoRico h-[48px] w-[48px] text-white font-bold text-3xl rounded-2xl flex justify-center items-center">
+              2
+            </h3>
+            <h3 class="text-3xs font-semibold pt-[6px] pb-3 text-center sm:text-start !leading-7">
+              Create variables and formulas
+            </h3>
+            <p class="sm:text-base text-sm text-shark leading-normal text-center sm:text-start">
+              Introduce your input fields and output fields with the formulas.
+            </p>
+          </div>
+        </div>
+        <div
+          class="xl:w-[300px] hover:scale-105 transition-all  duration-300 lg:w-4/12 sm:w-6/12 max-w-[258px] sm:max-w-[unset] lg:pl-3 xl:pl-[unset] pt-[55px] sm:pt-6 lg:pt-0">
+          <div
+            class="p-6 bg-white shadow-workBox  rounded-xl h-full min-h-[230px] flex flex-col items-center sm:items-start">
+            <h3
+              class="bg-azure h-[48px] w-[48px] text-white font-bold text-3xl rounded-2xl flex justify-center items-center">
+              3
+            </h3>
+            <h3 class="text-3xs xl:text-2xl font-semibold pt-[6px] pb-3 text-center sm:text-start">
+              Get your HTML code
+            </h3>
+            <p class="sm:text-base text-sm text-shark leading-normal text-center sm:text-start">
+              Download your HTML code while logged in and install it on your
+              homepage.
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="!text-center pt-[30px]">
+        <a class="hover:text-bostonBlue text-bostonBlue sm:text-tundora ease-out transition-all duration-300"
+          rel="noreferance" href="#">Learn more</a>
+      </p>
+    </div>
+  </section>
+  <!-- SUITABLE BUSINESS SECTION -->
+  <section class="lg:pt-[50px] py-16 lg:pb-[90px] xl:pb-[128px] bg-wildSand">
+    <div class="container custom_container">
+      <h2 class="text-2md sm:text-3xl lg:text-4xl text-tundora 
+                        text-center font-bold">
+        Suitable for <span class="text-bostonBlue">every kind <br> of business</span>
+      </h2>
+      <p class="text-base sm:text-lg text-shark text-center font-normal mt-6">
+        From a bakery to a battery producer
+      </p>
+      <div id="suitable-tabs" class="grid sm:grid-cols-2 items-center sm:gap-9 lg:gap-12 xl:gap-14 mt-8 md:mt-12">
+        <div class="sm:h-full">
+          <div tab-to="first"
+            class="border-b border-b-shark pb-4 sm:pb-5 mb-4 sm:mb-5 cursor-pointer active suitable-active-tab">
+            <p class="text-base sm:text-lg text-shark font-bold mb-[6px]">E-COMMERCE</p>
+            <p class="text-xs sm:text-sm text-shark font-normal flex justify-between items-center">Pet
+              shop,
+              clothing
+              store,
+              electronics
+              <span>
+                <svg class="max-w-[7px] sm:max-w-[10px]" width="13" height="17" viewBox="0 0 13 17" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 15L11 9L2 2" stroke="#1D2127" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </p>
+          </div>
+          <div tab-to="second" class="border-b border-b-shark pb-4 sm:pb-5 mb-4 sm:mb-5 cursor-pointer">
+            <p class="text-base sm:text-lg text-shark font-bold mb-[6px]">TAXES</p>
+            <p class="text-xs sm:text-sm text-shark font-normal flex justify-between items-center">
+              Manufacturing,
+              retail, money to invest
+              <span>
+                <svg class="max-w-[7px] sm:max-w-[10px]" width="13" height="17" viewBox="0 0 13 17" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 15L11 9L2 2" stroke="#1D2127" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </p>
+          </div>
+          <div tab-to="third" class="border-b border-b-shark pb-4 sm:pb-5 mb-4 sm:mb-5 cursor-pointer">
+            <p class="text-base sm:text-lg text-shark font-bold mb-[6px]">ECONOMY</p>
+            <p class="text-xs sm:text-sm text-shark font-normal flex justify-between items-center">Value
+              of a stock,
+              finances, mortgage
+              <span>
+                <svg class="max-w-[7px] sm:max-w-[10px]" width="13" height="17" viewBox="0 0 13 17" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 15L11 9L2 2" stroke="#1D2127" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </p>
+          </div>
+          <div tab-to="fourth" class="border-b border-b-shark pb-4 sm:pb-5 mb-4 cursor-pointer">
+            <p class="text-base sm:text-lg text-shark font-bold mb-[6px]">SERVICES</p>
+            <p class="text-xs sm:text-sm text-shark font-normal flex justify-between items-center">
+              Freelance
+              business,
+              marketing
+              <span>
+                <svg class="max-w-[7px] sm:max-w-[10px]" width="13" height="17" viewBox="0 0 13 17" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 15L11 9L2 2" stroke="#1D2127" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div id="suitable-tab-contents" class="h-full hidden sm:block">
+          <div class="active w-full h-full" tab-id="first">
+            <div class="w-full h-full !flex items-center">
+              <img class="w-full lg:h-[330px]" src="./public/assets/images/webp/home/e-ecommerce.webp"
+                alt="e-ecommerce">
+            </div>
+          </div>
+          <div class="hidden w-full h-full" tab-id="second">
+            <div class="w-full h-full !flex items-center"><img class="w-full lg:h-[330px]"
+                src="./public/assets/images/webp/home/taxes.webp" alt="taxes">
+            </div>
+          </div>
+          <div class="hidden w-full h-full" tab-id="third">
+            <div class="w-full h-full !flex items-center"><img class="w-full lg:h-[330px]"
+                src="./public/assets/images/webp/home/economy.webp" alt="economy">
+            </div>
+          </div>
+          <div class="hidden w-full h-full" tab-id="fourth">
+            <div class="w-full h-full !flex items-center"><img class="w-full lg:h-[330px]"
+                src="./public/assets/images/webp/home/services.webp" alt="services">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- DEVELOPED  SECTION DONE -->
+  <section class="sm:py-[46px] py-[108px] bg-developmentBg mb-[60px] sm:mb-0">
+    <div class="container custom_container">
+      <div class="lg:px-8 custom-xxl:px-0">
+        <h2 class="text-center text-white font-bold text-2md lg:text-3md">
+          400+ DEVELOPED
+        </h2>
+        <h3 class="text-center text-white text-sm pt-2 md:pb-[50px] pb-6 sm:text-2xl">
+          BUSINESS CALCULATORS <span class="block md:!inline">& PRODUCT CONFIGURATORS</span>
+        </h3>
+        <div
+          class="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-3 grid-rows-2 gap-4 sm:gap-x-16 sm:gap-y-0 gap-y-2 items-center">
+          <img class="opacity-70 cursor-pointer hover:scale-105 transition-all duration-300 w-full"
+            src="/public/assets/images/png/home/rkw-logo.png" alt="rkw" />
+          <img class="opacity-70 cursor-pointer hover:scale-105 transition-all duration-300 w-full"
+            src="/public/assets/images/png/home/bvr-logo.png" alt="bvr" />
+          <img class="opacity-70 cursor-pointer hover:scale-105 transition-all duration-300 w-full"
+            src="/public/assets/images/png/home/humboldt-logo.png" alt="humboldt" />
+          <img class="opacity-70 cursor-pointer hover:scale-105 transition-all duration-300 w-full"
+            src="/public/assets/images/png/home/verivox-logo.png" alt="verivox" />
+          <img class="opacity-70 cursor-pointer hover:scale-105 transition-all duration-300 w-full"
+            src="/public/assets/images/png/home/qversicherung-logo.png" alt="qversicherung" />
+          <img class="opacity-70 cursor-pointer hover:scale-105 transition-all duration-300 w-full hidden md:inline"
+            src="/public/assets/images/png/home/Bank-logo.png" alt="Bank" />
+          <img class="opacity-70 cursor-pointer hover:scale-105 transition-all duration-300 w-full"
+            src="/public/assets/images/png/home/joma-logo.png" alt="joma" />
+          <img class="opacity-70 cursor-pointer hover:scale-105 transition-all duration-300 w-full"
+            src="/public/assets/images/png/home/hinder-log.png" alt="hinder" />
+          <img class="opacity-70 cursor-pointer hover:scale-105 transition-all duration-300 w-full"
+            src="/public/assets/images/png/home/bmz-logo.png" alt="bmz" />
+          <img class="opacity-70 cursor-pointer hover:scale-105 transition-all duration-300 w-full"
+            src="/public/assets/images/png/home/ipe-logo.png" alt="ipe" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!---TESTIMONIALS SECTION START HERE-->
+  <section class="py-[147px]">
+    <div class="container custom_container">
+      <div class="relative">
+        <img
+          class="max-w-[156px] sm:max-w-[100px] lg:max-w-[183px] absolute start-0 -top-36 sm:top-3 lg:-top-8 sm:start-8 md:start-10 lg:start-20"
+          src="./public/assets/images/png/home/testimonials_quote.png" alt="quote" />
+        <div class="testimonials_slider">
+          <div class="ms:px-10 lg:px-[90px]">
+            <p class="text-sm sm:text-base text-shark text-center font-normal">
+              Testimonials
+            </p>
+            <h2 class="text-3xs sm:text-3xl lg:text-4xl text-shark mt-1 md:mt-3 text-center">
+              Join the <span class="font-bold">community</span>
+            </h2>
+            <p class="text-base sm:text-3xs lg:text-2xl text-tundora max-w-[673px] mx-auto mt-8 md:mt-11 text-center">
+              “ We are very excited about the fast and competent
+              implementation of our line custom made calculator products. This
+              saves us a lot time and allows us to offer even better customer
+              service. 100% recommended!!! ”
+            </p>
+            <div class="flex items-center justify-center gap-3 mt-9">
+              <img class="max-w-[60px] rounded-full" src="./public/assets/images/png/home/w-shumanter.png"
+                alt="w-shumanter" />
+              <div>
+                <h3 class="text-xs text-tundora font-bold">W. Shumanter</h3>
+                <p class="text-xs text-tundora font-normal">
+                  For holidaybox travel centers
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ms:px-10 lg:px-[90px]">
+            <p class="text-sm sm:text-base text-shark text-center font-normal">
+              Testimonials
+            </p>
+            <h2 class="text-4xl text-shark mt-1 md:mt-3 text-center">
+              Join the <span class="font-bold">community</span>
+            </h2>
+            <p class="text-base sm:text-3xs lg:text-2xl text-tundora max-w-[673px] mx-auto mt-8 md:mt-11 text-center">
+              “The contents of our pages were created with great care. However, we cannot guarantee that the content is
+              correct, complete or up-to-date. As a service provider, we are responsible for our own content on these
+              pages in accordance with general laws in accordance with Section 7 Paragraph 1 TMG. ”
+            </p>
+            <div class="flex items-center justify-center gap-3 mt-9">
+              <img class="max-w-[60px] rounded-full" src="./public/assets/images/png/home/w-shumanter.png"
+                alt="w-shumanter" />
+              <div>
+                <h3 class="text-xs text-tundora font-bold">W. Shumanter</h3>
+                <p class="text-xs text-tundora font-normal">
+                  For holidaybox travel centers
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ms:px-10 lg:px-[90px]">
+            <p class="text-sm sm:text-base text-shark text-center font-normal">
+              Testimonials
+            </p>
+            <h2 class="text-4xl text-shark mt-1 md:mt-3 text-center">
+              Join the <span class="font-bold">community</span>
+            </h2>
+            <p class="text-base sm:text-3xs lg:text-2xl text-tundora max-w-[673px] mx-auto mt-8 md:mt-11 text-center">
+              “However, liability in this regard is only possible from the time of knowledge of a specific legal
+              violation. If we become aware of any corresponding legal violations, we will immediately remove this
+              content.”
+            </p>
+            <div class="flex items-center justify-center gap-3 mt-9">
+              <img class="max-w-[60px] rounded-full" src="./public/assets/images/png/home/w-shumanter.png"
+                alt="w-shumanter" />
+              <div>
+                <h3 class="text-xs text-tundora font-bold">W. Shumanter</h3>
+                <p class="text-xs text-tundora font-normal">
+                  For holidaybox travel centers
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="max-w-[156px] sm:max-w-[100px] lg:max-w-[183px] absolute end-0 sm:end-8 md:end-10 lg:end-20 -bottom-44 sm:bottom-0 lg:-bottom-16 rotate-180"
+          src="./public/assets/images/png/home/testimonials_quote.png" alt="quote" />
+      </div>
+    </div>
+  </section>
+  <!-- TAB SECTION START -->
+  <section class="tabs_button mt-[60px] sm:mt-0">
+    <div>
+      <div class="calculator_tabs">
+        <div>
+          <div class="custom-xxl:max-w-[1085px] mx-auto">
+            <div class="flex flex-col sm:flex-row items-end bg-blizzardBlue sm:bg-transparent">
+              <div class="bg-blizzardBlue sm:ps-8 md:ps-14 md:pe-7 sm:pe-4  lg:ps-[107px] custom-xxl:ps-16 lg:pe-8 custom-xxl:pe-11 rounded-tr-xl
+                custom-xxl:rounded-t-xl pt-7 sm:w-auto text-center sm:text-start w-full">
+                <h3 class="font-semibold text-shark text-3xs md:text-2xl lg:text-4xl lg:!leading-10">
+                  PREMIUM & PRO
+                </h3>
+                <h3 class="font-semibold text-shark text-3xs md:text-2xl lg:text-4xl lg:!leading-10 sm:pl-2 md:pl-4">
+                  Calculators and tools
+                </h3>
+              </div>
+              <div
+                class="sm:px-7 lg:px-11 custom-xxl:px-14 pt-3 sm:pb-0 sm:pt-0 sm:mb-4 lg:mb-5 sm:bg-white sm:bg-transparent sm:w-auto w-full">
+                <h3
+                  class="font-semibold text-shark text-base sm:text-xl md:text-3xs lg:text-2xl text-center sm:text-start md:!leading-[30px]">
+                  Customized calculator <span class="font-normal">with</span> <br> <span class="font-normal"> automation
+                    based on your
+                    needs</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-[url('/public/assets/images/png/home/home-tab-bg.png')] bg-no-repeat bg-cover lg:pt-11 pt-[30px]">
+            <div class="container custom_container flex flex-col items-center">
+              <div
+                class="bg-shark opacity-85 border border-[rgba(217,_217,_217,_0.80)] w-full sm:w-10/12 md:w-full justify-between flex-wrap flex rounded-xl lg:min-h-[400px]">
+                <div class="md:w-6/12 pl-8 sm:pl-14 custom-xxl:pl-[75px] lg:pt-12 sm:py-7 pt-7">
+                  <h3 class="font-bold text-skyBlue text-xl md:text-2xl lg:text-3xl xl:text-3md lg:leading-[35px]">
+                    Escape rigid calculations!
+                  </h3>
+                  <h4
+                    class="text-white font-medium text-sm md:text-3xs lg:text-xl xl:text-2xl py-4 max-w-[400px] pr-10 sm:pr-0 md:!leading-7">
+                    Mein-Onlinerechner.com offers flexibility to customize and
+                    integrate results on your website.
+                  </h4>
+                  <a href="#" class="group">
+                    <p
+                      class="text-skyBlue inline-block gap-2 font-medium text-sm sm:text-lg relative before:absolute before:h-[2px] before:duration-300 before:transition-all group-hover:before:w-full before:bg-skyBlue before:bottom-[-10%] before:w-0">
+                      Look more calculators
+                    </p>
+                    <div
+                      class="relative before:absolute before:w-0 group-hover:before:w-[21px] before:left-[10%] mt-[2px] before:transition-all before:duration-300 before:bg-skyBlue before:h-[2px] inline before:top-[56%]">
+                      <img class="pl-2 inline group-hover:translate-x-[8px] transition-all duration-300"
+                        src="/public/assets/images/svg/home/right-arrow.svg" alt="arrow" />
+                    </div>
+                  </a>
+                </div>
+                <div class="md:w-6/12 pl-3 sm:pl-5 w-full pt-10 sm:pt-6 flex lg:pt-16 xl:pt-6">
+                  <img class="w-full" src="/public/assets/images/png/home/escape-house.png" alt="house" />
+                </div>
+              </div>
+
+              <div class="flex flex-wrap justify-center mt-[14px] pb-[60px] lg:pb-[120px] w-full">
+                <div class="md:pr-[7px] md:w-6/12 h-full w-full sm:w-10/12">
+                  <div
+                    class="h-full bg-shark opacity-85 lg:pt-12 sm:pt-10 pt-7 border border-[rgba(217,_217,_217,_0.80)] rounded-xl ">
+                    <div class="flex flex-col justify-between md:min-h-[584px] lg:min-h-[640px]">
+                      <div class="pl-8 sm:pl-14 custom-xxl:pl-[75px] pr-4">
+                        <h3 class="font-bold text-skyBlue text-xl md:text-2xl lg:text-3md lg:leading-[35px]">
+                          Tailor calculations to your needs
+                        </h3>
+                        <h4
+                          class="text-white font-medium text-sm md:text-3xs lg:text-xl xl:text-2xl sm:py-4 py-3 max-w-[370px] md:!leading-7">
+                          Seamlessly record, evaluate, edit, and integrate
+                          results directly on your website.
+                        </h4>
+                        <a href="#" class="group mb-5 lg:mb-11">
+                          <p
+                            class="text-skyBlue inline-block gap-2 font-medium text-sm sm:text-lg relative before:absolute before:h-[2px] before:duration-300 before:transition-all group-hover:before:w-full before:bg-skyBlue before:bottom-[-10%] before:w-0">
+                            Request an offer now
+                          </p>
+                          <div
+                            class="relative before:absolute before:w-0 group-hover:before:w-[21px] before:left-[10%] mt-[2px] before:transition-all before:duration-300 before:bg-skyBlue before:h-[2px] inline before:top-[56%]">
+                            <img class="pl-2 inline group-hover:translate-x-[8px] transition-all duration-300"
+                              src="/public/assets/images/svg/home/right-arrow.svg" alt="arrow" />
+                          </div>
+                        </a>
+                      </div>
+                      <div class="flex justify-start items-baseline">
+                        <img class="w-full pe-6 pt-6 sm:pt-0 lg:pe-16"
+                          src="/public/assets/images/png/home/tailer-calculater.png" alt="tailer" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:pl-[7px] md:w-6/12 h-full w-full sm:w-10/12">
+                  <div class="bg-shark opacity-85 lg:pt-12 sm:pt-10 pt-7 border border-[rgba(217,_217,_217,_0.80)]
+                    rounded-xl mt-[14px] md:mt-0">
+                    <div class="pr-4 flex flex-col justify-between md:min-h-[584px] lg:min-h-[642px]">
+                      <div class="pl-8 sm:pl-14 custom-xxl:pl-[75px]">
+                        <h3 class="font-bold text-skyBlue text-xl md:text-2xl lg:text-3md lg:leading-[35px]">
+                          Understand your <span class="lg:block">customer needs</span>
+                        </h3>
+                        <h4
+                          class="text-white font-medium text-sm md:text-3xs lg:text-xl xl:text-2xl py-3 max-w-[380px] sm:py-5 md:!leading-7">
+                          Improve your search engine rankings by directly
+                          integrating the HTML codes.
+                        </h4>
+                        <a href="#" class="group">
+                          <p
+                            class="text-skyBlue inline-block gap-2 font-medium text-sm sm:text-lg mb-11 lg:mb-7 relative before:absolute before:h-[2px] before:duration-300 before:transition-all group-hover:before:w-full before:bg-skyBlue before:bottom-[-10%] before:w-0">
+                            Explore Code Integration
+                          </p>
+                          <div
+                            class="relative before:absolute before:w-0 group-hover:before:w-[21px] before:left-[10%] mt-[2px] before:transition-all before:duration-300 before:bg-skyBlue before:h-[2px] inline before:top-[56%]">
+                            <img class="pl-2 inline group-hover:translate-x-[8px] transition-all duration-300"
+                              src="/public/assets/images/svg/home/right-arrow.svg" alt="arrow" />
+                          </div>
+                        </a>
+                      </div>
+                      <div class="flex justify-end">
+                        <img class="w-full ps-20 lg:ps-[90px]"
+                          src="/public/assets/images/png/home/understand-mobile.png" alt="
+                            mobile" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CAlCULATOR SECTION START HERE -->
+  <section class="bg-wildSand py-12 sm:py-[72px] lg:pt-[102px] lg:pb-[127px]" id="calculators">
+    <div class="container max-w-[890px] mx-auto px-4 lg:px-0">
+      <div class="text-center">
+        <h2 class="text-shark text-xl sm:text-3md md:text-[36px] mb-3">
+          Create your first <span class="font-bold">calculator</span>
+        </h2>
+        <p class="text-tundora font-medium text-s sm:text-base">
+          Our special features
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center pt-6 md:pt-10 lg:pt-[56px] items-center gap-6 sm:gap-10 lg:gap-[55px]">
+        <div class="w-auto">
+          <div
+            class="bg-white flex flex-col justify-between sm:pt-5 sm:px-[33px] sm:pb-8 px-9 pt-[30px] pb-[22px] rounded-[21px] text-center max-w-[270px] sm:max-w-[255px] min-h-[244px] shadow-popularCardShadow hover:shadow-none transition-all duration-300 cursor-pointer">
+            <div>
+              <img class="mx-auto" width="50" height="60" src="/public/assets/images/png/home/lock-img.png"
+                alt="lock-img" />
+              <h4 class="text-lg sm:text-lg font-bold text-tundora pt-4 sm:pt-5 pb-[11px]">
+                Security
+              </h4>
+              <p class="text-sm pb-1 font-normal text-tundora">
+                Formulas
+                <span class="font-semibold">cannot be viewed </span> from
+                outside due to
+                <span class="font-semibold">
+                  code swapping, SSL encryption</span>
+              </p>
+            </div>
+            <a rel="noreferance" class="text-sm sm:hidden text-bostonBlue" href="#">Learn more</a>
+          </div>
+        </div>
+        <div class="w-auto cursor-pointer">
+          <div
+            class="bg-white flex flex-col justify-between sm:pt-[27px] sm:px-[33px] sm:pb-[39px] px-9 pt-[30px] pb-[22px] rounded-[21px] text-center max-w-[270px] sm:max-w-[255px] min-h-[244px] shadow-popularCardShadow hover:shadow-none transition-all duration-300">
+            <div>
+              <img class="mx-auto" width="74" height="60" src="/public/assets/images/png/home/speed-img.png"
+                alt="speed-img" />
+              <h4 class="text-lg sm:text-lg font-bold text-tundora pt-4 sm:pt-5 pb-[11px]">
+                Speed
+              </h4>
+              <p class="text-sm pb-1 font-normal text-tundora">
+                <span class="font-semibold">Fast loading</span> through
+                Javascript/HTML content
+              </p>
+            </div>
+            <a rel="noreferance" class="text-sm sm:hidden text-bostonBlue pt-2 hover:opacity-80 duration-300"
+              href="#">Learn
+              more</a>
+          </div>
+        </div>
+        <div class="w-auto cursor-pointer">
+          <div
+            class="bg-white flex flex-col justify-between sm:pt-[27px] sm:px-[33px] sm:pb-[39px] px-9 pt-[30px] pb-[22px] rounded-[21px] text-center max-w-[270px] sm:max-w-[255px] min-h-[244px] shadow-popularCardShadow hover:shadow-none transition-all duration-300">
+            <div>
+              <img class="mx-auto" width="70" height="60"
+                src="/public/assets/images/png/home/charts-integration-img.png" alt="charts-integration" />
+              <h4 class="text-lg sm:text-lg font-bold text-tundora pt-4 sm:pt-5 pb-[11px]">
+                Charts integration
+              </h4>
+              <p class="text-sm pb-1 font-normal text-tundora">
+                Calculators can be
+                <span class="font-semibold">
+                  visualized with <br />
+                  diagrams </span>upon request
+              </p>
+            </div>
+            <a rel="noreferance" class="text-sm sm:hidden text-bostonBlue pt-2 hover:opacity-80 duration-300"
+              href="#">Learn
+              more</a>
+          </div>
+        </div>
+        <div class="w-auto cursor-pointer">
+          <div
+            class="bg-white flex flex-col justify-between sm:pt-[27px] sm:px-[33px] sm:pb-[39px] px-9 pt-[30px] pb-[22px] rounded-[21px] text-center max-w-[270px] sm:max-w-[255px] min-h-[244px] shadow-popularCardShadow hover:shadow-none transition-all duration-300">
+            <div>
+              <img class="mx-auto" width="60" height="60" src="/public/assets/images/png/home/sitting-img.png"
+                alt="sitting-img" />
+              <h4 class="text-lg sm:text-lg font-bold text-tundora pt-4 sm:pt-5 pb-[11px]">
+                Flexible maintenance
+              </h4>
+              <p class="text-sm pb-1 font-normal text-tundora">
+                In PRO packages,
+                <span class="font-semibold">fields and values can be edited
+                </span>
+                directly in the admin area
+              </p>
+            </div>
+            <a rel="noreferance" class="text-sm sm:hidden text-bostonBlue pt-2 hover:opacity-80 duration-300"
+              href="#">Learn
+              more</a>
+          </div>
+        </div>
+        <div class="w-auto cursor-pointer">
+          <div
+            class="bg-white flex flex-col justify-between sm:pt-[27px] sm:px-[33px] sm:pb-[39px] px-9 pt-[30px] pb-[22px] rounded-[21px] text-center max-w-[270px] sm:max-w-[255px] min-h-[244px] shadow-popularCardShadow hover:shadow-none transition-all duration-300">
+            <div>
+              <img class="mx-auto" width="60" height="60" src="/public/assets/images/png/home/calculator-img.png"
+                alt="calculator-img" />
+              <h4 class="text-lg sm:text-lg font-bold text-tundora pt-4 sm:pt-5 pb-[11px]">
+                Fixed price calculator
+              </h4>
+              <p class="text-sm pb-1 font-normal text-tundora">
+                No subscription,
+                <span class="font-semibold">one-off payment</span> for the
+                computer
+              </p>
+            </div>
+            <a rel="noreferance" class="text-sm sm:hidden text-bostonBlue pt-2 hover:opacity-80 duration-300"
+              href="#">Learn
+              more</a>
+          </div>
+        </div>
+        <div class="w-auto cursor-pointer">
+          <div
+            class="bg-white flex flex-col justify-between sm:pt-[27px] sm:px-[33px] sm:pb-[39px] px-9 pt-[30px] pb-[22px] rounded-[21px] text-center max-w-[270px] sm:max-w-[255px] min-h-[244px] shadow-popularCardShadow hover:shadow-none transition-all duration-300">
+            <div>
+              <img class="mx-auto" width="60" height="60" src="/public/assets/images/png/home/excel-img.png"
+                alt="excel-img" />
+              <h4 class="text-lg sm:text-lg font-bold text-tundora pt-4 sm:pt-5 pb-[11px]">
+                Excel advice
+              </h4>
+              <p class="text-sm pb-1 font-normal text-tundora">
+                An Excel expert will
+                <span class="font-semibold"> convert the calculations </span>
+              </p>
+            </div>
+            <a rel="noreferance" class="text-sm sm:hidden text-bostonBlue pt-2 hover:opacity-80 duration-300"
+              href="#">Learn
+              more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==== Our-Services Section ==== -->
+  <section>
+    <div class="our_services text-white !flex h-full">
+      <div
+        class="min-h-[713px] sm:min-h-[572px] h-full max-h-[685px] !flex justify-center items-center sm:max-h-[572px] py-10 md:py-[90px] bg-bostonBlue">
+        <div class="container custom_container">
+          <div class="!flex flex-col sm:flex-row gap-10 sm:gap-5 lg:gap-[107px] items-center justify-center">
+            <div class="text-center sm:hidden block">
+              <p class="text-sm font-semibold">Our services</p>
+              <h2 class="text-3xs sm:text-3xl lg:text-4xl mt-[10px] sm:mt-[14px] sm:hidden block leading-7">
+                Manufacturers and <br />large companies
+              </h2>
+            </div>
+            <div class="max-w-[188px] custom-md:max-w-[250px] md:max-w-[345px] sm:ms-5">
+              <img class="w-full" src="./public/assets/images/png/home/manufacturers.png" alt="manufacturers" />
+            </div>
+            <div class="w-auto me-10">
+              <p class="text-xs text-wildSand sm:text-sm font-semibold hidden sm:block">
+                Our services
+              </p>
+              <h2
+                class="text-3xs sm:text-3xl lg:text-4xl mt-[10px] sm:mt-[14px] hidden sm:block font-semibold !leading-[45px]">
+                Manufacturers and <br class="hidden lg:block" />
+                large companies
+              </h2>
+              <div
+                class="sm:mt-7 md:mt-11 sm:ms-5 lg:ms-10 max-w-[256px] custom-md:max-w-[400px] sm:max-w-none mx-auto">
+                <div class="flex items-start gap-4">
+                  <img class="max-w-3 mt-[6px]" src="./public/assets/images/svg/home/right-white-arrow.svg"
+                    alt="right-white-arrow" />
+                  <p class="text-base font-normal">
+                    <span class="font-bold">Converting Excel calculations</span>
+                    into secure <br class="hidden lg:block" />
+                    online calculators.
+                  </p>
+                </div>
+                <div class="flex items-start gap-4 mt-5 md:mt-8">
+                  <img class="max-w-3 mt-[6px]" src="./public/assets/images/svg/home/right-white-arrow.svg"
+                    alt="right-white-arrow" />
+                  <p class="text-base font-normal">
+                    We reliably implement
+                    <span class="font-bold">complex calculations</span>
+                    <br class="hidden lg:block" />
+                    in the high-quality design of your homepage.
+                  </p>
+                </div>
+                <div class="flex items-start gap-4 mt-5 md:mt-8">
+                  <img class="max-w-3 mt-[6px]" src="./public/assets/images/svg/home/right-white-arrow.svg"
+                    alt="right-white-arrow" />
+                  <p class="text-base font-normal">
+                    Charts or visualizations can be easily
+                    <br class="hidden lg:block" />
+                    developed
+                    <span class="font-bold">based on your data.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="min-h-[713px] sm:min-h-[572px] h-full max-h-[685px] !flex justify-center items-center sm:max-h-[572px] py-10 md:py-[90px] bg-pelorousBlue">
+        <div class="container custom_container">
+          <div class="!flex flex-col sm:flex-row gap-10 sm:gap-5 lg:gap-[107px] items-center justify-center">
+            <div class="text-center sm:hidden block">
+              <p class="text-xs sm:text-sm font-semibold">Our services</p>
+              <h2 class="text-3xs sm:text-3xl lg:text-4xl mt-[10px] sm:mt-[14px] sm:hidden block leading-7">
+                Dealers, online shops, <br />e-commerce
+              </h2>
+            </div>
+            <div class="max-w-[188px] custom-md:max-w-[250px] md:max-w-[345px] sm:ms-5">
+              <img class="w-full" src="./public/assets/images/png/home/dealers-laptop.png" alt="dealers-laptop" />
+            </div>
+            <div class="w-auto me-10">
+              <p class="text-xs text-wildSand sm:text-sm font-semibold hidden sm:block">
+                Our services
+              </p>
+              <h2
+                class="text-3xs sm:text-3xl lg:text-4xl mt-[10px] sm:mt-[14px] hidden sm:block font-semibold !leading-[45px]">
+                Dealers, online shops, <br />e-commerce
+              </h2>
+              <div
+                class="sm:mt-7 md:mt-11 sm:ms-5 lg:ms-10 max-w-[256px] custom-md:max-w-[400px] sm:max-w-none mx-auto">
+                <div class="flex items-start gap-4">
+                  <img class="max-w-3 mt-[6px]" src="./public/assets/images/svg/home/right-white-arrow.svg"
+                    alt="right-white-arrow" />
+                  <p class="text-base font-normal">
+                    <span class="font-bold">A connected price database</span>
+                    —an optimal <br class="hidden lg:block" />
+                    solution for effortlessly retrieving intricate
+                    <br class="hidden lg:block" />
+                    graduated prices with speed and precision.
+                  </p>
+                </div>
+                <div class="flex items-start gap-4 mt-5 md:mt-8">
+                  <img class="max-w-3 mt-[6px]" src="./public/assets/images/svg/home/right-white-arrow.svg"
+                    alt="right-white-arrow" />
+                  <p class="text-base font-normal">
+                    <span class="font-bold">Integration with shop databases</span>
+                    and <br class="hidden lg:block" />
+                    effortless conversion of Excel calculations
+                    <br class="hidden lg:block" />
+                    are well within reach.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="min-h-[713px] sm:min-h-[572px] h-full max-h-[685px] !flex justify-center items-center sm:max-h-[572px] py-10 md:py-[90px] bg-governorBayLight">
+        <div class="container custom_container">
+          <div class="!flex flex-col sm:flex-row gap-10 sm:gap-5 lg:gap-[107px] items-center justify-center">
+            <div class="text-center sm:hidden block">
+              <p class="text-xs sm:text-sm font-semibold">Our services</p>
+              <h2 class="text-3xs sm:text-3xl lg:text-4xl mt-[10px] sm:mt-[14px] sm:hidden block leading-7">
+                Service Professionals,<br />freelancers
+              </h2>
+            </div>
+            <div class="max-w-[188px] custom-md:max-w-[250px] md:max-w-[345px] sm:ms-5">
+              <img class="w-full" src="./public/assets/images/png/home/service-professionals.png"
+                alt="service-professionals" />
+            </div>
+            <div class="w-auto me-10">
+              <p class="text-xs sm:text-sm text-wildSand font-semibold hidden sm:block">
+                Our services
+              </p>
+              <h2
+                class="text-3xs sm:text-3xl lg:text-4xl mt-[10px] sm:mt-[14px] hidden sm:block font-semibold !leading-[45px]">
+                Service Professionals,<br />freelancers
+              </h2>
+              <div
+                class="sm:mt-7 md:mt-11 sm:ms-5 lg:ms-10 max-w-[256px] custom-md:max-w-[400px] sm:max-w-none mx-auto">
+                <div class="flex items-start gap-4">
+                  <img class="max-w-3 mt-[6px]" src="./public/assets/images/svg/home/right-white-arrow.svg"
+                    alt="right-white-arrow" />
+                  <p class="text-base font-bold">
+                    <span class="font-normal"> Creation and customization</span>
+                    achievable
+                    <br class="hidden lg:block" />
+                    without programming knowledge.</span>
+                  </p>
+                </div>
+                <div class="flex items-start gap-4 mt-5 md:mt-8">
+                  <img class="max-w-3 mt-[6px]" src="./public/assets/images/svg/home/right-white-arrow.svg"
+                    alt="right-white-arrow" />
+                  <p class="text-base font-normal">
+                    <span class="font-bold">Smooth integration</span>
+                    and added value to
+                    <br class="hidden lg:block" />
+                    any existing website.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==== Popular-Calculation Section ==== -->
+  <section class="py-[80px]">
+    <div class="container custom_container">
+      <div>
+        <h2 class="text-3xs sm:text-3xl lg:text-4xl text-shark text-center">
+          Popular <span class="font-bold">calculation tools</span>
+        </h2>
+        <p class="text-sm sm:text-base text-shark text-center mt-2 font-normal">
+          According to views
+        </p>
+        <div class="flex custom-md:flex-row flex-col justify-center gap-4 sm:gap-[42px] mt-6 sm:mt-8 md:mt-[51px]
+          max-w-[330px] sm:max-w-[454px] mx-auto">
+          <button
+            class="text-xs sm:text-sm max-w-fit mx-auto text-white py-2 px-3 sm:px-[18px] bg-commonBtnBg font-semibold rounded-xl inline-block custom-md:flex justify-center hover:shadow-commonBtnShadow duration-300">
+            <span class="sm:-mt-[2px]">Business calculators only</span>
+          </button>
+          <button
+            class="text-xs sm:text-sm max-w-fit mx-auto text-white py-2 px-4 sm:px-9 bg-commonBtnBg rounded-xl font-semibold inline-block custom-md:flex justify-center hover:shadow-commonBtnShadow duration-300">
+            <span class="sm:-mt-[2px]">All calculator topics</span>
+          </button>
+        </div>
+        <div class="hidden sm:grid grid-cols-3 sm:grid-cols-2 custom-xl:grid-cols-4 gap-4 custom-xl:gap-7
+          custom-xxl:gap-11 mt-16">
+          <div class="rounded-xl overflow-hidden shadow-popularCardShadow hover:scale-105 duration-300">
+            <img class="w-full" src="./public/assets/images/png/home/e-car.png" alt="e-car" />
+            <div class="px-4 lg:px-5 pt-3 pb-7 lg:pb-10">
+              <p class="text-sm text-shark font-semibold">
+                E-car leasing calculator funding
+              </p>
+              <p class="text-xs text-shark font-normal mt-3 lg:pe-10">
+                E-car bonus: Calculate the electric car leasing costs here.
+                Electric cars are encouraged
+              </p>
+              <button class="text-xs text-bostonBlue font-medium flex items-center gap-1 mt-4 ">
+                <span class="duration-300 border-b border-transparent hover:border-bostonBlue">Explore details</span>
+                <span>
+                  <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4 3.5L1 6" stroke="#3A81C3" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-popularCardShadow hover:scale-105 duration-300">
+            <img class="w-full" src="./public/assets/images/png/home/air-conditioning.png" alt="air-conditioning" />
+            <div class="px-4 lg:px-5 pt-3 pb-7 lg:pb-10">
+              <p class="text-sm text-shark font-semibold">
+                Air conditioning & cooling load calculation
+              </p>
+              <p class="text-xs text-shark font-normal mt-3">
+                Simple online calculator for air conditioning costs, air
+                conditioning unit costs and consumption including costs
+              </p>
+              <button class="text-xs text-bostonBlue font-medium flex items-center gap-1 mt-4 ">
+                <span class="duration-300 border-b border-transparent hover:border-bostonBlue">Explore details</span>
+                <span><svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4 3.5L1 6" stroke="#3A81C3" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-popularCardShadow hover:scale-105 duration-300">
+            <img class="w-full" src="./public/assets/images/png/home/scaffolding-cost.png" alt="scaffolding-cost" />
+            <div class="px-4 lg:px-5 pt-3 pb-7 lg:pb-10">
+              <p class="text-sm text-shark font-semibold">
+                Scaffolding cost calculator Rent or sell scaffolding cost
+                calculator
+              </p>
+              <p class="text-xs text-shark font-normal mt-3">
+                Simple calculator for commercial scaffolding rental companies
+                (scaffolding rental)
+              </p>
+              <button class="text-xs text-bostonBlue font-medium flex items-center gap-1 mt-4 ">
+                <span class="duration-300 border-b border-transparent hover:border-bostonBlue">Explore details</span>
+                <span><svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4 3.5L1 6" stroke="#3A81C3" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-popularCardShadow hover:scale-105 duration-300">
+            <img class="w-full" src="./public/assets/images/png/home/plastic-technology.png" alt="plastic-technology" />
+            <div class="px-4 lg:px-5 pt-3 pb-7 lg:pb-10">
+              <p class="text-sm text-shark font-semibold lg:pe-6">
+                Plastic technology calculator industry extrusion
+              </p>
+              <p class="text-xs text-shark font-normal mt-3">
+                E-car bonus: Calculate the electric car leasing costs here.
+                Electric cars are encouraged
+              </p>
+              <button class="text-xs text-bostonBlue font-medium flex items-center gap-1 mt-4 ">
+                <span class="duration-300 border-b border-transparent hover:border-bostonBlue">Explore details</span>
+                <span><svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4 3.5L1 6" stroke="#3A81C3" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sm:hidden mt-4 sm:mt-10 md:mt-[52px]">
+      <div class="popular_slider flex items-center relative">
+        <div class="max-[480]:px-2 px-1.5 min-[360]:min-w-[226px]">
+          <div
+            class="rounded-xl overflow-hidden shadow-popularCardShadow hover:scale-105 duration-300 min-h-[353px] custom-sm:min-h-[374px] custom-md:min-h-[347px] sm:min-h-0">
+            <img class="w-full" src="./public/assets/images/png/home/e-car.png" alt="e-car" />
+            <div class="px-5 custom-md:px-2 lg:px-5 pt-3 pb-7 lg:pb-10">
+              <p class="text-sm text-shark font-semibold">
+                E-car leasing calculator funding
+              </p>
+              <p class="text-xs text-shark font-normal mt-3">
+                E-car bonus: Calculate the electric car leasing costs here.
+                Electric cars are encouraged
+              </p>
+              <button class="text-xs text-bostonBlue font-medium flex items-center gap-1 mt-4 ">
+                <span class="duration-300 border-b border-transparent hover:border-bostonBlue">Explore details</span>
+                <span><svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4 3.5L1 6" stroke="#3A81C3" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="max-[480]:px-2 px-1.5 min-[360]:min-w-[226px]">
+          <div
+            class="rounded-xl overflow-hidden shadow-popularCardShadow hover:scale-105 duration-300 min-h-[353px] custom-sm:min-h-[374px] custom-md:min-h-[347px] sm:min-h-0">
+            <img class="w-full" src="./public/assets/images/png/home/air-conditioning.png" alt="air-conditioning" />
+            <div class="px-5 custom-md:px-2 lg:px-5 pt-3 pb-7 lg:pb-10">
+              <p class="text-sm text-shark font-semibold">
+                Air conditioning & cooling load calculation
+              </p>
+              <p class="text-xs text-shark font-normal mt-3">
+                Simple online calculator for air conditioning costs, air
+                conditioning unit costs and consumption including costs
+              </p>
+              <button class="text-xs text-bostonBlue font-medium flex items-center gap-1 mt-4 ">
+                <span class="duration-300 border-b border-transparent hover:border-bostonBlue">Explore details</span>
+                <span><svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4 3.5L1 6" stroke="#3A81C3" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="max-[480]:px-2 px-1.5 min-[360]:min-w-[226px]">
+          <div
+            class="rounded-xl overflow-hidden shadow-popularCardShadow hover:scale-105 duration-300 min-h-[353px] custom-sm:min-h-[374px] custom-md:min-h-[347px] sm:min-h-0">
+            <img class="w-full" src="./public/assets/images/png/home/scaffolding-cost.png" alt="scaffolding-cost" />
+            <div class="px-5 custom-md:px-2 lg:px-5 pt-3 pb-7 lg:pb-10">
+              <p class="text-sm text-shark font-semibold">
+                Scaffolding cost calculator Rent or sell scaffolding cost
+                calculator
+              </p>
+              <p class="text-xs text-shark font-normal mt-3">
+                Simple calculator for commercial scaffolding rental companies
+                (scaffolding rental)
+              </p>
+              <button class="text-xs text-bostonBlue font-medium flex items-center gap-1 mt-4  ">
+                <span class="duration-300 border-b border-transparent hover:border-bostonBlue">Explore details</span>
+                <span><svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4 3.5L1 6" stroke="#3A81C3" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="max-[480]:px-2 px-1.5 min-[360]:min-w-[226px]">
+          <div
+            class="rounded-xl overflow-hidden shadow-popularCardShadow hover:scale-105 duration-300 min-h-[353px] custom-sm:min-h-[374px] custom-md:min-h-[347px] sm:min-h-0">
+            <img class="w-full" src="./public/assets/images/png/home/plastic-technology.png" alt="plastic-technology" />
+            <div class="px-5 custom-md:px-2 lg:px-5 pt-3 pb-7 lg:pb-10">
+              <p class="text-sm text-shark font-semibold">
+                Plastic technology calculator industry extrusion
+              </p>
+              <p class="text-xs text-shark font-normal mt-3">
+                E-car bonus: Calculate the electric car leasing costs here.
+                Electric cars are encouraged
+              </p>
+              <button class="text-xs text-bostonBlue font-medium flex items-center gap-1 mt-4 ">
+                <span class="duration-300 border-b border-transparent hover:border-bostonBlue">Explore details</span>
+                <span><svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4 3.5L1 6" stroke="#3A81C3" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =========== ACCORDIAN ========= -->
+  <section class="bg-[url('/public/assets/images/png/faq/faq_premium_background.png')] bg-cover bg-no-repeat sm:py-[150px]
+    pt-[86px] pb-[49px] faq_premium" id="faq">
+    <div class="container custom_container">
+      <div class="max-w-[1164px] mx-auto">
+        <h2 class="font-normal text-shark sm:leading-[45.36px] text-center md:text-start mx-auto leading-[27.72px]
+          sm:max-w-full max-w-[222px] text-3xs sm:text-3xl xl:text-4xl sm:mb-[27px] mb-[35px] md:px-[108px]
+          lg:px-0 lg:max-w-[885px] custom-xxl:max-w-none md:ps-[108px]">
+          <span class="font-semibold">FAQ</span> about
+          <span class="font-semibold">PREMIUM</span> calculators
+        </h2>
+        <div class="flex flex-col gap-3 mt-4 md:px-[108px] lg:px-0 lg:max-w-[885px] mx-auto">
+          <!-- ============= ACCORDIAN ITEM 1 ========== -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="text-start faqBg accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full py-[10px] sm:px-4 px-5 rounded-xl sm:leading-[22.68px] leading-[17.64px]  text-white text-sm  sm:text-lg font-semibold outline-none border-0 categoryButton">
+              Can the computer really be easily integrated anywhere?
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="14" height="18" viewBox="0 0 14 18"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_249_843)">
+                  <g clip-path="url(#clip1_249_843)">
+                    <path
+                      d="M3.3533 2.0774L1.85364 2.10926L2.16167 16.606L3.66133 16.5741L12.032 10.3949L12.0001 8.89525L3.3533 2.0774Z"
+                      fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_249_843">
+                    <rect width="12" height="16" fill="white" transform="translate(0.829834 1.13086) rotate(-1.2279)" />
+                  </clipPath>
+                  <clipPath id="clip1_249_843">
+                    <rect width="10" height="14.5" fill="white"
+                      transform="translate(1.85376 2.10938) rotate(-1.21727)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="sm:ps-4 sm:pe-[31px] px-5 sm:pt-[14px] pt-3" role="none">
+                <p class="sm:leading-[22.68px] leading-[17.64px] text-shark text-sm sm:text-lg font-normal">
+                  Regarding
+                  integration, we offer
+                  several solutions. The first is the integration via a simple iFrame, which we specify in an optimized
+                  manner. More experienced users integrate the calculator as their own HTML content, but it must be
+                  noted
+                  that your previous layout does not overlap with the new CSS classes. </p>
+              </div>
+              </a>
+            </div>
+          </div>
+          <!-- ============= ACCORDIAN ITEM 2 ========== -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="text-start faqBg accordion-single-title  js-acc-single-trigger flex justify-between items-center gap-2 w-full py-[10px] sm:px-4 px-5  rounded-xl sm:leading-[22.68px] leading-[17.64px] text-black text-sm sm:text-lg font-semibold outline-none border-0 categoryButton">
+              How safe are the calculator and the formulas?
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="14" height="18" viewBox="0 0 14 18"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_249_843)">
+                  <g clip-path="url(#clip1_249_843)">
+                    <path
+                      d="M3.3533 2.0774L1.85364 2.10926L2.16167 16.606L3.66133 16.5741L12.032 10.3949L12.0001 8.89525L3.3533 2.0774Z"
+                      fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_249_843">
+                    <rect width="12" height="16" fill="white" transform="translate(0.829834 1.13086) rotate(-1.2279)" />
+                  </clipPath>
+                  <clipPath id="clip1_249_843">
+                    <rect width="10" height="14.5" fill="white"
+                      transform="translate(1.85376 2.10938) rotate(-1.21727)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="sm:ps-4 sm:pe-[31px] px-5 sm:pt-[14px] pt-3 " role="none">
+                <p class="sm:leading-[22.68px] leading-[17.64px] text-shark text-sm sm:text-lg font-normal">By
+                  outsourcing the pure
+                  calculation data to a php file, the calculations cannot be viewed...</p>
+              </div>
+              </a>
+            </div>
+          </div>
+          <!-- ============= ACCORDIAN ITEM 3 ========== -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="text-start faqBg accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full py-[10px] sm:px-4 px-5 rounded-xl sm:leading-[22.68px] leading-[17.64px] text-black text-sm sm:text-lg font-semibold outline-none border-0 categoryButton">
+              How does the computer creation process work?
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="14" height="18" viewBox="0 0 14 18"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_249_843)">
+                  <g clip-path="url(#clip1_249_843)">
+                    <path
+                      d="M3.3533 2.0774L1.85364 2.10926L2.16167 16.606L3.66133 16.5741L12.032 10.3949L12.0001 8.89525L3.3533 2.0774Z"
+                      fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_249_843">
+                    <rect width="12" height="16" fill="white" transform="translate(0.829834 1.13086) rotate(-1.2279)" />
+                  </clipPath>
+                  <clipPath id="clip1_249_843">
+                    <rect width="10" height="14.5" fill="white"
+                      transform="translate(1.85376 2.10938) rotate(-1.21727)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="sm:ps-4 sm:pe-[31px] px-5 sm:pt-[14px] pt-3 " role="none">
+                <p class="sm:leading-[22.68px] leading-[17.64px] text-shark text-sm sm:text-lg font-normal">
+                  Details about the process of programming computers can be found...
+                </p>
+              </div>
+              </a>
+            </div>
+          </div>
+          <!-- ============= ACCORDIAN ITEM 4 ========== -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="text-start faqBg accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full py-[10px] sm:px-4 px-5 rounded-xl sm:leading-[22.68px] leading-[17.64px] text-black text-sm sm:text-lg font-semibold outline-none border-0 categoryButton">
+              Can I change the data later?
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="14" height="18" viewBox="0 0 14 18"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_249_843)">
+                  <g clip-path="url(#clip1_249_843)">
+                    <path
+                      d="M3.3533 2.0774L1.85364 2.10926L2.16167 16.606L3.66133 16.5741L12.032 10.3949L12.0001 8.89525L3.3533 2.0774Z"
+                      fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_249_843">
+                    <rect width="12" height="16" fill="white" transform="translate(0.829834 1.13086) rotate(-1.2279)" />
+                  </clipPath>
+                  <clipPath id="clip1_249_843">
+                    <rect width="10" height="14.5" fill="white"
+                      transform="translate(1.85376 2.10938) rotate(-1.21727)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="sm:ps-4 sm:pe-[31px] px-5 sm:pt-[14px] pt-3 " role="none">
+                <p class="sm:leading-[22.68px] leading-[17.64px] text-shark text-sm sm:text-lg font-normal">
+                  We also offer various options for this. Basically, all calculator designs can be changed in...
+                </p>
+              </div>
+              </a>
+            </div>
+          </div>
+          <!-- ============= ACCORDIAN ITEM 5 ========== -->
+          <div class="accordion-single-item js-acc-item">
+            <button
+              class="text-start faqBg accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full py-[10px] sm:px-4 px-5 rounded-xl sm:leading-[22.68px] leading-[17.64px] text-black text-sm sm:text-lg font-semibold outline-none border-0 categoryButton">
+              See all more questions
+              <svg class="arrow-icon transition-all duration-200 ease-linear" width="14" height="18" viewBox="0 0 14 18"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_249_843)">
+                  <g clip-path="url(#clip1_249_843)">
+                    <path
+                      d="M3.3533 2.0774L1.85364 2.10926L2.16167 16.606L3.66133 16.5741L12.032 10.3949L12.0001 8.89525L3.3533 2.0774Z"
+                      fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_249_843">
+                    <rect width="12" height="16" fill="white" transform="translate(0.829834 1.13086) rotate(-1.2279)" />
+                  </clipPath>
+                  <clipPath id="clip1_249_843">
+                    <rect width="10" height="14.5" fill="white"
+                      transform="translate(1.85376 2.10938) rotate(-1.21727)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <div class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+              <div class="sm:ps-4 sm:pe-[31px] px-5 sm:pt-[14px] pt-3 " role="none">
+                <p class="sm:leading-[22.68px] leading-[17.64px] text-shark text-sm sm:text-lg font-normal">
+                  Regarding integration, we offer several solutions. The first is the integration via a simple iFrame,
+                  which we specify in an optimized manner. More experienced users integrate the calculator as their own
+                  HTML content, but it must be noted that your previous layout does not overlap with the new CSS
+                  classes.
+                </p>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- =========== FOOTER ========== -->
+  <footer class="bg-shark">
+    <div class="custom_container">
+      <div class="flex flex-wrap justify-between  pt-12 md:pt-10">
+        <div class="w-full lg:w-3/12">
+          <a href="/"><img height="30px" width="164px" src="/assets/images/png/home/page-logo.png"
+              alt="footer logo"></a>
+          <p class="font-bold text-2xs sm:text-xs text-wildSand pt-7 md:pt-[15px]">B2B monthly newsletter
+          </p>
+          <p class="font-normal text-2xs sm:text-xs text-wildSand lg:max-w-[210px] opacity-90">The
+            latest
+            trends and topics about
+            online calculators
+          </p>
+          <form class="pt-3 lg:pt-2 flex flex-col items-start">
+            <input
+              class="w-[172px] sm:w-[233px] text-2xs sm:text-xs text py-[5px] sm:py-2 px-2 sm:px-3 border bg-transparent text-white placeholder:text-white border-wildSand border-opacity-50 rounded-[7px] sm:rounded-xl"
+              type="email" required placeholder="emma@example.com">
+            <button type="submit"
+              class="text-sm font-bold text-white py-[10px] sm:py-3 px-5 sm:px-8 border border-opacity-50 border-wildSand rounded-[7px] sm:rounded-xl mt-3 hover:bg-bostonBlue duration-300 hover:border-bostonBlue">Send</button>
+          </form>
+        </div>
+        <div class="w-full lg:w-8/12 flex justify-between flex-wrap pt-5 lg:pt-0">
+          <div class="w-1/2 sm:w-auto">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal opacity-80">Menu</li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/">Home</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/">How
+                  it
+                  works</a></li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/faq">FAQ</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">All
+                  calculators</a></li>
+            </ul>
+          </div>
+          <div class="w-1/2 sm:w-auto">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-[30px]"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/faq">Contact
+                  Us</a></li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/faq">Order
+                  process</a></li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/gallery">Product
+                  info</a></li>
+            </ul>
+          </div>
+          <div class="w-1/2 sm:w-auto pt-8 sm:pt-0">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal  opacity-80">Legal</li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/impressum">Impressum</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/terms">Terms
+                  of
+                  use</a></li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/dataProtection">Data
+                  Protection</a></li>
+            </ul>
+          </div>
+          <div class="w-1/2 sm:w-auto pt-8 sm:pt-0">
+            <ul>
+              <li class="text-alto text-2xs sm:text-xs font-normal opacity-80">Calculation tools</li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">Price
+                  calculator</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">Calculate
+                  tariffs</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/individual">Excel
+                  calculator</a>
+              </li>
+              <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                  class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                  href="/gallery">More
+                  tools</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p
+        class="lg:text-end text-center text-opacity-50 text-alto text-2xs sm:text-xs font-normal pt-[68px] sm:pt-10 md:pt-6 lg:pt-3 pb-3">
+        ©2016-<span id="year-change"></span>
+        Mein-Onlinerechner.com Online
+        Calculators</p>
+    </div>
+  </footer>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top" class="fixed right-0 bottom-0 m-5 z-[99] back-to-top">
+    <span class="bg-interactivitybox p-2 inline-block rounded-full border-2 border-white"><svg width="24" height="24"
+        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 11L12 5L18 11M6 19L12 13L18 19" stroke="#fff" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg></span>
+  </button>
+  <script src="/assets/js/index.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script>
+    function showNav() {
+      var navBar = document.getElementById("navBar");
+      var body = document.getElementsByTagName("body")[0];
+      var navToggleIcon = document.getElementById("navToggleIcon");
+      navBar.classList.toggle("show_nav");
+      body.classList.toggle("nav_mobile_scroll");
+      navToggleIcon.src = navBar.classList.contains("show_nav") ?
+        "/assets/images/svg/home/nav-cross.svg" :
+        "/assets/images/svg/home/navbar-hamburguer.svg";
+    }
+  </script>
+  <script>
+    // NAV CUSTOM SELECT JS
+    document.addEventListener("DOMContentLoaded", function () {
+      const selectButton = document.getElementById("select-button");
+      const selectOptions = document.getElementById("select-options");
+      const dropdownIcon = document.getElementById("dropdown-icon");
+
+      selectButton.addEventListener("click", function () {
+        selectOptions.classList.toggle("hidden");
+        dropdownIcon.classList.toggle("rotate-180");
+      });
+
+      selectOptions.querySelectorAll("a").forEach((option) => {
+        option.addEventListener("click", function () {
+          const selectedOption = option.textContent.trim();
+          selectButton.querySelector("span").textContent = selectedOption;
+          selectOptions.classList.add("hidden");
+        });
+      });
+
+      // Close the dropdown when clicking outside of it
+      window.addEventListener("click", function (e) {
+        if (!selectButton.contains(e.target)) {
+          selectOptions.classList.add("hidden");
+          dropdownIcon.classList.remove("rotate-180");
+        }
+      });
+    });
+  </script>
+  <script>
+    // ACCORDIAN JS
+    document.addEventListener("DOMContentLoaded", function () {
+      const accSingleTriggers = document.querySelectorAll(
+        ".js-acc-single-trigger"
+      );
+      accSingleTriggers.forEach((trigger) =>
+        trigger.addEventListener("click", toggleAccordion)
+      );
+      // Open the second accordion item by default
+      const secondAccordionItem =
+        document.querySelectorAll(".js-acc-item")[0];
+      secondAccordionItem.classList.add("is-open");
+      const content = secondAccordionItem.querySelector(
+        ".accordion-single-content"
+      );
+      content.style.maxHeight = "189px";
+      // Rotate the arrow icon for the second accordion item
+      const arrowIcon = secondAccordionItem.querySelector(".arrow-icon");
+      arrowIcon.classList.remove("faq_arrow_rotate");
+      // Change button text color for the default open item
+      const button = secondAccordionItem.querySelector(".js-acc-single-trigger");
+      button.classList.add("text-white");
+    });
+
+    function toggleAccordion() {
+      const items = document.querySelectorAll(".js-acc-item");
+      const thisItem = this.parentNode;
+      items.forEach((item) => {
+        if (thisItem == item) {
+          thisItem.classList.toggle("is-open");
+          const content = thisItem.querySelector(".accordion-single-content");
+          content.style.maxHeight = content.style.maxHeight ?
+            null :
+            content.scrollHeight + "px";
+          // Rotate the arrow icon
+          const arrowIcon = thisItem.querySelector(".arrow-icon");
+          arrowIcon.classList.toggle("faq_arrow_rotate");
+          // Change button text color
+          const button = thisItem.querySelector(".js-acc-single-trigger");
+          button.classList.toggle("text-white");
+          // ======== background ==========
+          const background = thisItem.querySelector(".js-acc-single-trigger");
+          background.classList.toggle("bg-azure");
+          background.classList.toggle("bg-white");
+          return;
+        }
+        item.classList.remove("is-open");
+        item.querySelector(".accordion-single-content").style.maxHeight = null;
+        // Reset the arrow icon rotation
+        const arrowIcon = item.querySelector(".arrow-icon");
+        arrowIcon.classList.add("faq_arrow_rotate");
+        // Reset button text color
+        const button = item.querySelector(".js-acc-single-trigger");
+        button.classList.remove("text-white");
+        // Reset background color of the button
+        const background = item.querySelector(".js-acc-single-trigger");
+        background.classList.remove("bg-azure");
+        background.classList.add("bg-white");
+      });
+    }
+    // ==== SUITABLE BUSINESS JS ====
+    document.querySelectorAll('#suitable-tabs [tab-to]').forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        let link = this.getAttribute('tab-to');
+        let active_tab_content = document.querySelector('#suitable-tab-contents .active');
+        let suitable_tab = document.querySelector('#suitable-tab-contents [tab-id="' + link + '"]');
+        let active_tab = document.querySelector('#suitable-tabs .active')
+
+        active_tab_content.classList.remove("active");
+        active_tab_content.classList.add("hidden");
+
+        suitable_tab.classList.remove("hidden");
+        suitable_tab.classList.add("active");
+
+        active_tab.classList.remove("active", "suitable-active-tab");
+        this.classList.add("active", "suitable-active-tab");
+      });
+    });
+
+    // ==== Our-Services Slider JS ====
+    $(".our_services").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true, // Enable arrows
+      prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><img src="/assets/images/svg/home/services_left_arrow.svg" alt="services_left_arrow" > < /button>',
+      nextArrow: '<button class="slick-next" aria-label="Next" type="button"><img src="/assets/images/svg/home/services_right_arrow.svg" alt="services_right_arrow" > < /button>',
+    });
+    // ==== Testimonials Slider JS ====
+    $(document).ready(function () {
+      $(".testimonials_slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        dots: true,
+        arrows: false,
+      });
+    });
+    // ==== Popular Slider JS ====
+    $(".popular_slider").slick({
+      slidesToShow: 2,
+      centerMode: true,
+      slidesToScroll: 1,
+      fade: false,
+      dots: false,
+      arrows: false,
+      responsive: [{
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },],
+    });
+    // ==== Testimonials Slider JS ====
+    $(document).ready(function () {
+      $(".testimonials_slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        dots: true,
+        arrows: false,
+      });
+    });
+    // ==== popular Slider JS ====
+    $(".popular_slider").slick({
+      slidesToShow: 2,
+      centerMode: true,
+      slidesToScroll: 1,
+      fade: false,
+      dots: false,
+      arrows: false,
+      responsive: [{
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },],
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>Online Rencher</title>
+    <meta name="title" content="Customizable online 
+calculators for your website" />
+    <meta name="description" content="Empower your site through effortless calculations
+with interactive buttons, engaging tools and more" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Customizable online 
+calculators for your website" />
+    <meta property="og:description" content="Empower your site through effortless calculations
+with interactive buttons, engaging tools and more" />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Customizable online 
+calculators for your website" />
+    <meta property="twitter:description" content="Empower your site through effortless calculations
+with interactive buttons, engaging tools and more" />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+    <link rel="shortcut icon" href="./public/assets/images/svg/home/favicon.svg" type="image/x-icon" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
+    <link rel="stylesheet" href="./public/assets/css/style.css" />
+</head>
+
+<body>
+    <!-- POPUP -->
+    <div id="popup-parent" class="absolute backdrop-blur-md w-screen h-screen z-[52] px-3 hidden">
+        <div class="h-full flex justify-center items-center">
+            <div id="overlay" class="fixed top-0 left-0 h-screen w-screen z-0"></div>
+            <button id="close-popup"
+                class="absolute z-[50] top-[3%] sm:top-[5%] right-[5%] hover:rotate-180 text-black transition-all duration-300 font-bold">
+                <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div
+                class="relative z-[1] flex w-full max-w-[500px] sm:max-w-[690px] popup mx-auto rounded-xl shadow-whiteShadow bg-white">
+                <!-- Popup content -->
+                <form class="w-full sm:w-1/2 lg:py-[30px] p-5 lg:px-10">
+                    <img class="max-w-[189px] mx-auto mb-5 rounded-e-xl"
+                        src="./public/assets/images/png/home/page-popup-logo.png" alt="page-popup-logo" />
+                    <h3 class="text-xl font-semibold text-shark text-center sm:text-start">
+                        Log in to explore and enjoy all our features.
+                    </h3>
+                    <label class="text-2xs sm:text-xs text-shark block mb-2 font-normal mt-4 lg:mt-6">Username or
+                        email</label>
+                    <input required
+                        class="py-2 placeholder:absolute placeholder:top-[30%] sm:placeholder:top-[25%] px-3 border-[1px] border-tundora active:outline-bostonBlue focus-visible:outline-bostonBlue focus-visible:!outline-[1px] rounded-md placeholder:text-rollingStone placeholder:text-xs placeholder:sm:text-sm placeholder:font-normal w-full"
+                        type="email" placeholder="emma@example.com" />
+                    <label class="text-2xs sm:text-xs text-shark block my-2 font-normal">Password</label>
+                    <input required
+                        class="py-2 placeholder:absolute placeholder:top-[30%] sm:placeholder:top-[25%] px-3 border-[1px] border-tundora active:outline-bostonBlue  focus-visible:outline-bostonBlue focus-visible:!outline-[1px] rounded-md placeholder:text-rollingStone placeholder:text-xs placeholder:sm:text-sm placeholder:font-normal w-full"
+                        type="password" placeholder="password" />
+                    <button
+                        class="py-[10px] px-7 bg-pelorousBlue text-white font-bold text-2xs sm:text-xs mt-4 rounded-md block w-full hover:shadow-loginBtn duration-300">
+                        Continue
+                    </button>
+                    <p class="text-rollingStone opacity-60 font-normal text-2xs mt-4">
+                        By continuing, you agree to the
+                        <a rel="references" href="#"
+                            class="border-b-rollingStone hover:text-azure border-b transition-all duration-300">Terms
+                            and Conditions
+                            of use</a>. Please
+                        refer to our
+                        <a rel="references" href="#"
+                            class="border-b-rollingStone hover:text-azure border-b transition-all duration-300">Privacy
+                            Policy</a>.
+                    </p>
+                    <a rel="references" href="#"
+                        class="text-azure font-normal text-2xs mt-4 hover:opacity-70 transition-all duration-300">Forgot
+                        your
+                        password?</a>
+                </form>
+                <!-- Image section (hidden on small screens) -->
+                <div class="w-1/2 hidden sm:block">
+                    <img class="w-full h-full" src="./public/assets/images/png/home/log-in-popup-img.png"
+                        alt="log-in-popup-img" />
+                </div>
+                <!-- Close icon -->
+            </div>
+        </div>
+    </div>
+    <!-- =========== HEADER SECTION =========== -->
+    <section
+        class="flex flex-col lg:bg-[url('/public/assets/images/webp/faq/faq-hero-image.webp')] bg-no-repeat bg-cover lg:pb-[89px]">
+        <header>
+            <nav class="!py-3 flex justify-between px-6 lg:max-w-[1108px] mx-auto">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="/">
+                        <img class="h-[60px] hidden lg:inline pr-1" src="/public/assets/images/png/home/page-logo.png"
+                            alt="logo" />
+                    </a>
+                    <a rel="noreferance"
+                        class="text-white text-xs font-semibold hidden lg:inline-block hover:bg-lightSky rounded-xl transition-all duration-300 py-[6px] px-3 leading-normal"
+                        href="/">How it works</a>
+                    <a rel="noreferance"
+                        class="text-white text-xs font-semibold hidden lg:inline-block hover:bg-lightSky rounded-xl transition-all duration-300 py-[6px] px-3 leading-normal"
+                        href="/faq">FAQ,s</a>
+                    <a rel="noreferance"
+                        class="text-white text-xs font-semibold hidden lg:inline-block hover:bg-lightSky rounded-xl transition-all duration-300 py-[6px] px-3 leading-normal"
+                        href="/gallery">All calculators</a>
+                </div>
+
+                <!-- Menu -->
+                <div class="hidden  lg:flex items-center">
+                    <div>
+                        <div class="flex">
+                            <p id="open-popup-desktop"
+                                class="text-white cursor-pointer flex gap-1 open-popup hover:bg-lightSky items-center px-3 text-xs font-medium rounded-xl transition-all duration-300 leading-normal">
+                                <img src="/public/assets/images/svg/home/login-icon.svg" alt="login" />Log in</p>
+                            <a rel="noreferance" href="#"
+                                class="text-white me-2 flex gap-1 hover:bg-lightSky rounded-xl transition-all duration-300 items-center px-3 text-xs font-medium leading-normal"><img
+                                    src="/public/assets/images/svg/home/language-icon.svg" alt="language" />EN</a>
+                            <div class="border flex gap-2 items-center py-[6px] px-4 border-white rounded-full">
+                                <img class="h-[12px] cursor-pointer" src="/public/assets/images/svg/home/search.svg"
+                                    alt="search icon" />
+                                <input
+                                    class="border-0 text-white placeholder:text-white placeholder:opacity-70 text-xs bg-transparent outline-none"
+                                    placeholder="Search" type="text" />
+                            </div>
+                            <a href="mailto:contact@gmail.com"
+                                class="bg-white flex gap-2 ms-4 items-center hover:flex transition-all duration-300 hover:justify-center hover:shadow-navBtnShadow w-[176px] group hover:bg-navBtnBg py-[6px] px-4 rounded-xl">
+                                <img class="h-[12px] transition-all duration-300 group-hover:hidden"
+                                    src="/public/assets/images/svg/home/mail-icon.svg" alt="mail icon" />
+                                <p
+                                    class="text-xs font-medium transition-all duration-300 group-hover:hidden text-azure leading-none">
+                                    <span>contact@gmail.com</span>
+                                </p>
+                                <p
+                                    class="text-xs hidden transition-all duration-300 group-hover:block text-white font-medium leading-none">
+                                    <span>Let's Talk</span>
+                                </p>
+                                <img class="h-[12px] hidden transition-all duration-300 group-hover:block"
+                                    src="/public/assets/images/svg/home/white-mail.svg" alt="mail icon" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button (Hidden on Medium and above screens) -->
+                <div class="lg:hidden flex items-center relative z-[51]">
+                    <a rel="noreferance" href="mailto:contact@gmail.com"
+                        class="bg-bostonBlue !h-[34px] flex gap-2 items-center py-[9px] px-3 rounded-full cursor-pointer">
+                        <p class="text-xs font-bold flex gap-2 text-white uppercase">
+                            <img src="./public/assets/images/svg/home/white-mail.svg" alt="mail" />contact
+                        </p>
+                    </a>
+
+                    <div class="mobile_navbar_btn d-none cursor-pointer ms-3">
+                        <img onclick="showNav()" class="mobile_nav_toggle cursor_pointer" id="navToggleIcon"
+                            src="/public/assets/images/svg/home/navbar-hamburguer.svg" alt="toggle" />
+                    </div>
+                </div>
+            </nav>
+            <!-- Mobile Menu (Hidden on Small screens) -->
+            <div id="navBar"
+                class="bg-white absolute top-[10%] lg:hidden left-[-100%] w-full z-50 !h-screen transition-all duration-300 ease-linear">
+                <div class="flex flex-col">
+                    <p id="open-popup-mobile"
+                        class="font-semibold text-tundora text-lg pl-4 py-6 cursor-pointer  border-b-[2px] border-blue-600 open-popup">
+                        Log
+                        in</p>
+                    <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray" href="/">How it
+                        works</a>
+                    <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray"
+                        href="/faq">Frequently
+                        asked
+                        questions</a>
+                    <a class="font-semibold text-tundora text-lg pl-4 py-6 border-b border-smokeGray"
+                        href="/gallery">All
+                        calculators</a>
+                    <div class="relative border-b border-smokeGray">
+                        <div class="relative w-full cursor-pointer" id="select-button">
+                            <button class="pl-4 py-6">
+                                <span class="w-full font-semibold text-tundora text-lg">Change language</span>
+                                <span
+                                    class="absolute inset-y-0 right-[3%] flex items-center pr-2 pointer-events-none transform transition-transform"
+                                    id="dropdown-icon">
+                                    <img class="absolute rotate-180 w-[10px]"
+                                        src="./public/assets/images/png/home/nav-mobile-select.png" alt="select" />
+                                </span>
+                            </button>
+                        </div>
+                        <div id="select-options" class="absolute mt-1 w-full hidden">
+                            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="select-button">
+                                <a rel="noreferance" href="#" class="block px-4 py-2 text-lg text-tundora"
+                                    role="menuitem">English</a>
+                                <a rel="noreferance" href="#" class="block px-4 py-2 text-lg text-tundora"
+                                    role="menuitem">Deutsch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <div
+            class="bg-[url('/public/assets/images/webp/faq/faq-hero-image.webp')] lg:bg-none bg-no-repeat bg-cover py-7 sm:py-10 md:py-12 lg:pt-8 lg:pb-0">
+            <h1
+                class="text-center text-white font-extrabold text-3xs sm:text-3md md:text-4xl lg:text-3lg lg:leading-[56.7px]">
+                Help Center:
+                FAQs
+            </h1>
+        </div>
+    </section>
+    <!-- =========== FREQUENTLY AND TAB SECTION =========== -->
+    <div class="custom_container container">
+        <!-- Search bar section -->
+        <div class="relative max-w-[885px] mx-auto mt-[14px] sm:mt-6 md:mt-[35px]">
+            <input type="text"
+                class="py-[10px] pl-[18px] pr-[14px] text-sm sm:text-xs border focus:outline-none border-alto border-lg  rounded-xl w-full"
+                placeholder="Search question" />
+            <img class="cursor-pointer h-3 w-3 end-3 sm:w-5 sm:h-5 absolute top-1/2 -translate-y-1/2"
+                src="/assets/images/png/faq/seacrh-image.png" alt="search">
+        </div>
+        <!-- FAQ section -->
+        <div class="max-w-[708px] mx-auto pt-[17px] sm:pt-6 lg:pt-[30px] xl:pt-6">
+            <h3
+                class="sm:text-center text-2md sm:text-3xl md:text-4xl lg:text-2lg text-shark font-extrabold leading-[33px] md:leading-[50.4px] lg:px-3">
+                Frequently asked
+                <span class="block sm:inline-flex">example,</span>
+                example and example questions
+            </h3>
+            <p class="pt-8 sm:pt-[10px] text-tundora text-base sm:text-center lg:px-10">Explore our
+                compilation of
+                frequently
+                asked questions
+                covering topics such as. Please don't
+                hesitate to <a href="#contact" class="text-bostonBlue transition-all duration-200 hover:border-b border-bostonBlue">contact us</a> at
+                any time!
+            </p>
+            <!-- Tab navigation -->
+            <div id="tabs" class="flex flex-wrap pt-8 sm:pt-6 w-full sm:justify-between">
+                <!-- first tab link -->
+                <div class="w-1/2 flex sm:w-auto pe-1 sm:pe-0">
+                    <div class="bg-gallery rounded-xl">
+                        <p class="p-2 font-semibold text-sm text-tundora cursor-pointer rounded-xl active bg-iceberg"
+                            tab-to="first">
+                            General Questions
+                        </p>
+                    </div>
+                </div>
+                <!-- second tab link -->
+                <div class="w-1/2 flex sm:w-auto ps-1 sm:ps-0">
+                    <p class="p-2 bg-gallery font-semibold text-sm text-tundora cursor-pointer rounded-xl"
+                        tab-to="second">
+                        Ordering Process
+                    </p>
+                </div>
+                <!-- third tab link -->
+                <div class="w-1/2 flex sm:w-auto pe-1 sm:p-0 pt-3">
+                    <p class="p-2 bg-gallery font-semibold text-sm text-tundora cursor-pointer rounded-xl"
+                        tab-to="third">
+                        Product Information
+                    </p>
+                </div>
+                <!-- fourth tab link -->
+                <div class="w-1/2 flex sm:w-auto ps-1 sm:p-0 pt-3">
+                    <p class="p-2 bg-gallery font-semibold text-sm text-tundora cursor-pointer rounded-xl"
+                        tab-to="fourth">
+                        Incorporation Insight
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-contents">
+        <!-- =========== FIRST ACTIVE TAB SECTION =========== -->
+        <div class="pt-8 sm:pt-6 active" id="first">
+            <div class="custom_container container">
+                <div class="max-w-[708px] mx-auto">
+                    <h4 class="text-bostonBlue md:text-3md text-2xl font-bold">Section</h4>
+                    <!-- accordion container -->
+                    <div class="flex flex-col pb-6 sm:pb-10 md:pb-[54px] xl:pb-11 faq_accordion">
+                        <!-- Accordion Item 1 -->
+                        <div
+                            class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 pb-4 pt-[14px]">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <!-- Content for Accordion Item 1 -->
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion Item 2 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <!-- Content for Accordion Item 2 -->
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion Item 3 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion Item 4 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion Item 5 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-wildSand">
+                <div class="custom_container container">
+                    <div class="max-w-[708px] mx-auto pt-11 pb-10 sm:pb-12 md:pb-[54px] xl:pb-[68px]">
+                        <h4 class="text-bostonBlue md:text-3md text-2xl font-bold pb-[14px]">Section</h4>
+                        <!-- acc single -->
+                        <!-- accordian -->
+                        <div class="flex flex-col">
+                            <!-- Category 1 -->
+                            <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                                <div
+                                    class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full text-tundora text-xs font-bold outline-none border-0">
+                                    <span class="text-lg font-bold text-shark">Question example?</span>
+                                    <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                        <span
+                                            class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                        <span
+                                            class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                    <div class="pt-3 pe-2 ps-1" role="none">
+                                        <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis
+                                            hendrerit
+                                            justo
+                                            congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                            purus
+                                            lacinia
+                                            risus, ut malesuada ex quam nec turpis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Category 2 -->
+                            <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                                <div
+                                    class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full text-tundora text-xs font-bold outline-none border-0">
+                                    <span class="text-lg font-bold text-shark">Question example?</span>
+                                    <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                        <span
+                                            class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                        <span
+                                            class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                    <div class="pt-3 pe-2 ps-1" role="none">
+                                        <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis
+                                            hendrerit
+                                            justo
+                                            congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                            purus
+                                            lacinia
+                                            risus, ut malesuada ex quam nec turpis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Category 3 -->
+                            <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                                <div
+                                    class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full text-tundora text-xs font-bold outline-none border-0">
+                                    <span class="text-lg font-bold text-shark">Question example?</span>
+                                    <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                        <span
+                                            class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                        <span
+                                            class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                    <div class="pt-3 pe-2 ps-1" role="none">
+                                        <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis
+                                            hendrerit
+                                            justo
+                                            congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                            purus
+                                            lacinia
+                                            risus, ut malesuada ex quam nec turpis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Category 4 -->
+                            <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                                <div
+                                    class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full text-tundora text-xs font-bold outline-none border-0">
+                                    <span class="text-lg font-bold text-shark">Question example?</span>
+                                    <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                        <span
+                                            class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                        <span
+                                            class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                    <div class="pt-3 pe-2 ps-1" role="none">
+                                        <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis
+                                            hendrerit
+                                            justo
+                                            congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                            purus
+                                            lacinia
+                                            risus, ut malesuada ex quam nec turpis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Category 5 -->
+                            <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                                <div
+                                    class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full text-tundora text-xs font-bold outline-none border-0">
+                                    <span class="text-lg font-bold text-shark">Question example?</span>
+                                    <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                        <span
+                                            class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                        <span
+                                            class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                    <div class="pt-3 pe-2 ps-1" role="none">
+                                        <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis
+                                            hendrerit
+                                            justo
+                                            congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                            purus
+                                            lacinia
+                                            risus, ut malesuada ex quam nec turpis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="custom_container container hidden md:block">
+                <div class="max-w-[708px] mx-auto pt-8 sm:pt-11">
+                    <h4 class="text-bostonBlue md:text-3md text-2xl font-bold pb-[14px]">Section</h4>
+                    <!-- accordian -->
+                    <div class="flex flex-col">
+                        <!-- Category 1 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Category 2 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Category 3 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Category 4 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Category 5 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- =========== OTHER TAB CONTENT SECTION =========== -->
+        <div class="custom_container container">
+            <div class="max-w-[708px] mx-auto">
+                <div class="pt-6 hidden" id="second">
+                    <h4 class="text-bostonBlue md:text-3md text-2xl font-bold pb-[14px]">Section</h4>
+                    <!-- second accordian -->
+                    <div class="flex flex-col">
+                        <!-- Second Accordion Item 1 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Accordion Item 2 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Accordion Item 3 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Accordion Item 4 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Accordion Item 5 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6 hidden" id="third">
+                    <h4 class="text-bostonBlue md:text-3md text-2xl font-bold pb-[14px]">Section</h4>
+                    <!-- third accordian -->
+                    <div class="flex flex-col">
+                        <!--Third Category 1 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Category 2 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Category 3 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <button
+                                class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <span class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </span>
+                            </button>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Category 4 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Category 5 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6 hidden" id="fourth">
+                    <h4 class="text-bostonBlue md:text-3md text-2xl font-bold pb-[14px]">Section</h4>
+                    <!-- fourth tab  accordian -->
+                    <div class="flex flex-col">
+                        <!-- Category 1 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Category 2 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Category 3 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <button
+                                class="accordion-single-title js-acc-single-trigger flex justify-between items-center gap-2 w-full text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <span class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </span>
+                            </button>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Category 4 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Category 5 -->
+                        <div class="accordion-single-item js-acc-item border-b border-shark border-opacity-50 py-4">
+                            <div
+                                class="accordion-single-title cursor-pointer js-acc-single-trigger flex justify-between items-center gap-2 w-full bg-white text-tundora text-xs font-bold outline-none border-0">
+                                <span class="text-lg font-bold text-shark">Question example?</span>
+                                <div class="relative h-5 w-5 rounded-full border border-bostonBlue">
+                                    <span
+                                        class="before:w-[10px] before:absolute before:h-[2px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                    <span
+                                        class="before:w-[2px] arrow-icon before:absolute before:h-[10px] before:bg-bostonBlue w-5 h-5 before:top-1/2 before:start-1/2 before:-translate-x-1/2 before:-translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div
+                                class="accordion-single-content max-h-0 overflow-hidden transition-max-height duration-300">
+                                <div class="pt-3 pe-2 ps-1" role="none">
+                                    <p>Aliquam erat volutpat. Ut interdum odio ut arcu efficitur, quis hendrerit
+                                        justo
+                                        congue. Vestibulum sodales, tortor in fermentum pellentesque, sapien
+                                        purus
+                                        lacinia
+                                        risus, ut malesuada ex quam nec turpis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =========== form submit =========== -->
+    <div class="custom_container container">
+        <!--  Section Title  -->
+        <h3
+            class="text-center pt-[18px] sm:pt-10 md:pt-[54px] xl:pt-[93px] text-2md sm:text-3xl md:text-4xl lg:text-2lg text-shark font-extrabold leading-[33px] md:leading-[50.4px] lg:px-3">
+            Still have a question we didn’t
+            <span class="sm:block">answer here?</span>
+        </h3>
+        <!--  Form  -->
+        <form id="contact" class="max-w-[525px] mx-auto pt-7 sm:pt-[17px] pb-10 md:pb-[54px] xl:pb-[88px]">
+            <p class="sm:pt-[10px] pt-4 pb-2 text-tundora text-sm sm:text-base md:text-lg  font-medium">
+                Fill out the form below and we'd be happy to answer!
+            </p>
+            <!-- Email Input -->
+            <div class="w-full flex flex-col items-start">
+                <label for="useremail" class="sm:pb-2 pb-4 text-tundora text-lg font-semibold">Email</label>
+                <input
+                    class="bg-bostonBlue bg-opacity-10 w-full px-3 focus:outline-none placeholder:absolute placeholder:top-[22%] sm:placeholder:top-[25%] text-lg h-[50px] rounded-xl text-tundora text-opacity-100"
+                    type="email" name="email" id="useremail" placeholder="name@example.com">
+            </div>
+            <!-- Name and Email Inputs (Side by Side) -->
+            <div class="flex flex-col sm:flex-row flex-wrap w-full pt-4 sm:pt-8">
+                <div class="flex flex-col items-start sm:w-1/2 sm:pe-2">
+                    <label for="firstName" class="sm:pb-2 pb-4 text-tundora text-lg font-semibold">Name</label>
+                    <input
+                        class="bg-bostonBlue bg-opacity-10 w-full px-3 focus:outline-none text-lg h-[50px] rounded-xl text-tundora text-opacity-100"
+                        type="text" name="name" id="firstName">
+                </div>
+                <div class="flex flex-col items-start sm:w-1/2 sm:ps-2 pt-4 sm:pt-0">
+                    <label for="lastName" class="sm:pb-2 pb-4 text-tundora text-lg font-semibold">Last
+                        Name</label>
+                    <input
+                        class="bg-bostonBlue bg-opacity-10 w-full px-3 focus:outline-none text-lg h-[50px] rounded-xl text-tundora text-opacity-100"
+                        type="text" name="lastName" id="lastName">
+                </div>
+            </div>
+            <!-- Comment Textarea -->
+            <div class="w-full flex flex-col items-start pt-[30px] sm:pt-[25px]">
+                <label for="comment"
+                    class="sm:pb-2 pb-[18px] text-tundora text-start text-base sm:text-lg font-semibold">Feel
+                    free to
+                    inquire or provide
+                    additional details about your project!</label>
+
+                <textarea
+                    class="bg-bostonBlue resize-none h-[90px] bg-opacity-10 w-full px-3 focus:outline-none text-lg rounded-xl text-tundora text-opacity-100"
+                    name="commont" id="comment"></textarea>
+
+            </div>
+            <!-- Submit Button -->
+            <div class="sm:pt-[25px] pt-[30px] flex justify-center md:justify-start">
+                <button type="submit"
+                    class="flex items-center gap-3 py-2 px-6 bg-bostonBlue rounded-xl text-wildSand font-bold text-lg">
+                    <img src="/assets/images/svg/faq/message.svg" alt="">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+    <footer class="bg-shark">
+        <div class="custom_container container">
+            <div class="flex flex-wrap justify-between  pt-12 md:pt-10">
+                <div class="w-full lg:w-3/12">
+                    <a href="/"><img height="30px" width="164px" src="/assets/images/png/home/page-logo.png"
+                            alt="footer logo"></a>
+                    <p class="font-bold text-2xs sm:text-xs text-wildSand pt-7 md:pt-[15px]">B2B monthly newsletter
+                    </p>
+                    <p class="font-normal text-2xs sm:text-xs text-wildSand lg:max-w-[210px] opacity-90">The
+                        latest
+                        trends and topics about
+                        online calculators
+                    </p>
+                    <form class="pt-3 lg:pt-2 flex flex-col items-start">
+                        <input
+                            class="w-[172px] sm:w-[233px] text-2xs sm:text-xs text py-[5px] sm:py-2 px-2 sm:px-3 border bg-transparent text-white placeholder:text-white border-wildSand border-opacity-50 rounded-[7px] sm:rounded-xl"
+                            type="email" required placeholder="emma@example.com">
+                        <button type="submit"
+                            class="text-sm font-bold text-white py-[10px] sm:py-3 px-5 sm:px-8 border border-opacity-50 border-wildSand rounded-[7px] sm:rounded-xl mt-3 hover:bg-bostonBlue duration-300 hover:border-bostonBlue">Send</button>
+                    </form>
+                </div>
+                <div class="w-full lg:w-8/12 flex justify-between flex-wrap pt-5 lg:pt-0">
+                    <div class="w-1/2 sm:w-auto">
+                        <ul>
+                            <li class="text-alto text-2xs sm:text-xs font-normal opacity-80">Menu</li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/">Home</a>
+                            </li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/">How
+                                    it
+                                    works</a></li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/faq">FAQ</a>
+                            </li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/individual">All
+                                    calculators</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2 sm:w-auto">
+                        <ul>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-[30px]"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/faq">Contact
+                                    Us</a></li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/faq">Order
+                                    process</a></li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/gallery">Product
+                                    info</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2 sm:w-auto pt-8 sm:pt-0">
+                        <ul>
+                            <li class="text-alto text-2xs sm:text-xs font-normal  opacity-80">Legal</li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/impressum">Impressum</a>
+                            </li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/terms">Terms
+                                    of
+                                    use</a></li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/dataProtection">Data
+                                    Protection</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2 sm:w-auto pt-8 sm:pt-0">
+                        <ul>
+                            <li class="text-alto text-2xs sm:text-xs font-normal opacity-80">Calculation tools</li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/individual">Price
+                                    calculator</a>
+                            </li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/individual">Calculate
+                                    tariffs</a>
+                            </li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/individual">Excel
+                                    calculator</a>
+                            </li>
+                            <li class="text-alto text-2xs sm:text-xs font-normal pt-3"><a
+                                    class="hover:opacity-80 duration-500 relative before:absolute before:w-0 before:h-[1px] before:bg-white before:opacity-80 before:bottom-[-2px] hover:before:w-full before:duration-200"
+                                    href="/gallery">More
+                                    tools</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p
+                class="lg:text-end text-center text-opacity-50 text-alto text-2xs sm:text-xs font-normal pt-[68px] sm:pt-10 md:pt-6 lg:pt-3 pb-3">
+                ©2016-<span id="year-change"></span>
+                Mein-Onlinerechner.com Online
+                Calculators</p>
+        </div>
+    </footer>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="fixed right-0 bottom-0 m-5 z-[99] back-to-top">
+        <span class="bg-interactivitybox p-2 inline-block rounded-full border-2 border-white"><svg width="24"
+                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 11L12 5L18 11M6 19L12 13L18 19" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg></span>
+    </button>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/index.js"></script>
+    <script>
+        function showNav() {
+            var navBar = document.getElementById("navBar");
+            var body = document.getElementsByTagName("body")[0];
+            var navToggleIcon = document.getElementById("navToggleIcon");
+
+            navBar.classList.toggle("show_nav");
+            body.classList.toggle("nav_mobile_scroll");
+            navToggleIcon.src = navBar.classList.contains("show_nav") ?
+                "/assets/images/svg/home/nav-cross.svg" :
+                "/assets/images/svg/home/navbar-hamburguer.svg";
+        }
+    </script>
+    <!-- tab js -->
+    <!-- - ACCORDIAN JS -->
+    <script>
+        document.querySelectorAll('#tabs [tab-to]').forEach(function (item) {
+            item.addEventListener('click', function (e) {
+                let link = this.getAttribute('tab-to');
+                let active_content = document.querySelector('#tab-contents .active');
+                let tab_el = document.querySelector('#tab-contents [id="' + link + '"]');
+                let active_tab = document.querySelector('#tabs .active')
+                active_content.classList.remove("active");
+                active_content.classList.add("hidden");
+                tab_el.classList.remove("hidden");
+                tab_el.classList.add("active");
+                active_tab.classList.remove("active", "bg-iceberg");
+                this.classList.add("active", "bg-iceberg");
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Add event listener to each accordion trigger
+            const accSingleTriggers = document.querySelectorAll(".js-acc-single-trigger");
+            accSingleTriggers.forEach((trigger) =>
+                trigger.addEventListener("click", toggleAccordion)
+            );
+
+            // Open the second accordion item by default
+            const secondAccordionItem = document.querySelectorAll(".js-acc-item")[0];
+            secondAccordionItem.classList.add("is-open");
+            const content = secondAccordionItem.querySelector(".accordion-single-content");
+            content.style.maxHeight = "150px";
+
+            // Rotate the arrow icon for the second accordion item
+            const arrowIcon = secondAccordionItem.querySelector(".arrow-icon");
+            arrowIcon.classList.add("hidden");
+        });
+
+        function toggleAccordion() {
+            const items = document.querySelectorAll(".js-acc-item");
+            const thisItem = this.parentNode;
+            items.forEach((item) => {
+                if (thisItem == item) {
+                    // Toggle class to open/close accordion
+                    thisItem.classList.toggle("is-open");
+                    const content = thisItem.querySelector(".accordion-single-content");
+                    content.style.maxHeight = content.style.maxHeight ?
+                        null :
+                        content.scrollHeight + "px";
+
+                    // Toggle visibility of arrow icon
+                    const arrowIcon = thisItem.querySelector(".arrow-icon");
+                    arrowIcon.classList.toggle("hidden");
+                    return;
+                }
+                // Close other accordion items
+                item.classList.remove("is-open");
+                item.querySelector(".accordion-single-content").style.maxHeight = null;
+
+                // Reset arrow icon rotation
+                const arrowIcon = item.querySelector(".arrow-icon");
+                arrowIcon.classList.remove("hidden");
+            });
+        }
+
+        // NAV CUSTOM SELECT JS
+        document.addEventListener("DOMContentLoaded", function () {
+            const selectButton = document.getElementById("select-button");
+            const selectOptions = document.getElementById("select-options");
+            const dropdownIcon = document.getElementById("dropdown-icon");
+
+            selectButton.addEventListener("click", function () {
+                selectOptions.classList.toggle("hidden");
+                dropdownIcon.classList.toggle("rotate-180");
+            });
+
+            selectOptions.querySelectorAll("a").forEach((option) => {
+                option.addEventListener("click", function () {
+                    const selectedOption = option.textContent.trim();
+                    selectButton.querySelector("span").textContent = selectedOption;
+                    selectOptions.classList.add("hidden");
+                });
+            });
+
+            // Close the dropdown when clicking outside of it
+            window.addEventListener("click", function (e) {
+                if (!selectButton.contains(e.target)) {
+                    selectOptions.classList.add("hidden");
+                    dropdownIcon.classList.remove("rotate-180");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
